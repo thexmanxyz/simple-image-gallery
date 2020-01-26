@@ -12,6 +12,7 @@
     <!-- Parameters -->
     <params>
         <param name="galleries_rootfolder" type="text" default="images/stories" label="JW_PLG_SIG_ROOTFOLDER" description="JW_PLG_SIG_ROOTFOLDER_DESC" />
+        <param name="mootools" type="checkbox" checked="1" label="JW_PLG_SIG_MOOTOOLS" description="JW_PLG_SIG_MOOTOOLS_DESC" value="1" />
         <param name="jQueryHandling" type="list" default="1.12.4" label="JW_PLG_SIG_JQUERY_HANDLING" description="JW_PLG_SIG_JQUERY_HANDLING_DESC">
             <option value="0">JW_PLG_SIG_DO_NOT_LOAD_THE_JQUERY_LIBRARY</option>
             <option value="1.8.3">JW_PLG_SIG_LOAD_V1_8_X_LATEST_COPY</option>
@@ -41,6 +42,7 @@
         <param name="fancybox_download" type="text" default="" hint="JW_PLG_SIG_FB_DOWNLOAD" label="JW_PLG_SIG_FB_LANG_DOWNLOAD" description="JW_PLG_SIG_FB_LANG_DOWNLOAD_DESC" />
         <param name="fancybox_share" type="text" default="" hint="JW_PLG_SIG_FB_SHARE" label="JW_PLG_SIG_FB_LANG_SHARE" description="JW_PLG_SIG_FB_LANG_SHARE_DESC" />
         <param name="fancybox_zoom" type="text" default="" hint="JW_PLG_SIG_FB_ZOOM" label="JW_PLG_SIG_FB_LANG_ZOOM" description="JW_PLG_SIG_FB_LANG_ZOOM_DESC" />
+        <param name="fancybox_version" type="text" hint="3.5.7" default="3.5.7" label="JW_PLG_SIG_FB_VERSION" description="JW_PLG_SIG_FB_VERSION_DESC" />
     </params>
     <!-- Files -->
     <files folder="plugin" destination="jw_sig">

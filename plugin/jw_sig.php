@@ -156,6 +156,7 @@ class plgContentJw_sig extends JPlugin
 
         $galleries_rootfolder = ($params->get('galleries_rootfolder')) ? $params->get('galleries_rootfolder') : $pluginParams->get('galleries_rootfolder', $defaultImagePath);
         $popup_engine = 'jquery_fancybox';
+        $mootools = $pluginParams->get('mootools', 1);
         $jQueryHandling = $pluginParams->get('jQueryHandling', '1.12.4');
         $thb_template = 'Classic';
         $thb_width = (!is_null($params->get('thb_width', null))) ? $params->get('thb_width') : $pluginParams->get('thb_width', 200);
@@ -176,6 +177,7 @@ class plgContentJw_sig extends JPlugin
         $fancybox_download = $pluginParams->get('fancybox_download', JText::_('JW_PLG_SIG_FB_DOWNLOAD'));
         $fancybox_share = $pluginParams->get('fancybox_share', JText::_('JW_PLG_SIG_FB_SHARE'));
         $fancybox_zoom = $pluginParams->get('fancybox_zoom', JText::_('JW_PLG_SIG_FB_ZOOM'));
+        $fancybox_version = $pluginParams->get('fancybox_version', '3.5.7');
 
         // Advanced
         $memoryLimit = (int)$pluginParams->get('memoryLimit');
@@ -267,12 +269,14 @@ class plgContentJw_sig extends JPlugin
                         require $popupRequire;
                     }
 
-                    if (version_compare(JVERSION, '4', 'ge')) {
-                        // Do nothing
-                    } elseif (version_compare(JVERSION, '2.5.0', 'ge')) {
-                        JHtml::_('behavior.framework');
-                    } else {
-                        JHTML::_('behavior.mootools');
+                    if($mootools) {
+                        if (version_compare(JVERSION, '4', 'ge')) {
+                            // Do nothing
+                        } elseif (version_compare(JVERSION, '2.5.0', 'ge')) {
+                            JHtml::_('behavior.framework');
+                        } else {
+                            JHTML::_('behavior.mootools');
+                        }
                     }
 
                     if (count($stylesheets)) {
