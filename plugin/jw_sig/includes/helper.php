@@ -1,16 +1,16 @@
 <?php
 /**
  * @version      4.1.0
- * @package      Simple Image Gallery (plugin)
- * @author       JoomlaWorks - https://www.joomlaworks.net
- * @copyright    Copyright (c) 2006 - 2020 JoomlaWorks Ltd. All rights reserved.
+ * @package      Simple Image Gallery Fork
+ * @author       Andreas Kar (thex) <andreas.kar@gmx.at>
+ * @copyright    Copyright © 2020 Andreas Kar. All rights reserved.
  * @license      GNU/GPL license: https://www.gnu.org/licenses/gpl.html
  */
 
 // no direct access
 defined('_JEXEC') or die('Restricted access');
 
-class SimpleImageGalleryHelper
+class SimpleImageGalleryForkHelper
 {
     public $srcimgfolder;
     public $thb_width;
@@ -45,10 +45,10 @@ class SimpleImageGalleryHelper
         }
 
         // Internal parameters
-        $prefix = "jw_sig_cache_";
+        $prefix = "jw_sigf_cache_";
 
         // Set the cache folder
-        $cacheFolderPath = JPATH_SITE.'/cache/jw_sig';
+        $cacheFolderPath = JPATH_SITE.'/cache/jw_sigf';
         if (file_exists($cacheFolderPath) && is_dir($cacheFolderPath)) {
             // all OK
         } else {
@@ -143,7 +143,7 @@ class SimpleImageGalleryHelper
 
                 // Bail out if the image resource is not OK
                 if (!$source) {
-                    JError::raiseNotice('', JText::_('JW_PLG_SIG_ERROR_SRC_IMGS'));
+                    JError::raiseNotice('', JText::_('JW_PLG_SIGF_ERROR_SRC_IMGS'));
                     return;
                 }
 
@@ -175,7 +175,7 @@ class SimpleImageGalleryHelper
             // Assemble the image elements
             $gallery[$key]->filename = $filename;
             $gallery[$key]->sourceImageFilePath = $siteUrl.$srcimgfolder.'/'.$this->replaceWhiteSpace($filename);
-            $gallery[$key]->thumbImageFilePath = $siteUrl.'cache/jw_sig/'.$prefix.$gal_id.'_'.strtolower($this->cleanThumbName($thumbfilename));
+            $gallery[$key]->thumbImageFilePath = $siteUrl.'cache/jw_sigf/'.$prefix.$gal_id.'_'.strtolower($this->cleanThumbName($thumbfilename));
             $gallery[$key]->width = $thb_width;
             $gallery[$key]->height = $thb_height;
         }

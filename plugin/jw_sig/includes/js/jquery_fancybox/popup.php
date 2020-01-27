@@ -1,9 +1,9 @@
 <?php
 /**
  * @version      4.1.0
- * @package      Simple Image Gallery (plugin)
- * @author       JoomlaWorks - https://www.joomlaworks.net
- * @copyright    Copyright (c) 2006 - 2020 JoomlaWorks Ltd. All rights reserved.
+ * @package      Simple Image Gallery Fork
+ * @author       Andreas Kar (thex) <andreas.kar@gmx.at>
+ * @copyright    Copyright © 2020 Andreas Kar. All rights reserved.
  * @license      GNU/GPL license: https://www.gnu.org/licenses/gpl.html
  */
 
@@ -43,17 +43,17 @@ if(!defined('PE_FANCYBOX_LOADED')){
         (function($) {
             $(document).ready(function() {
                 $.fancybox.defaults.i18n.en = {
-                    CLOSE: '".JText::_('JW_PLG_SIG_FB_CLOSE')."',
-                    NEXT: '".JText::_('JW_PLG_SIG_FB_NEXT')."',
-                    PREV: '".JText::_('JW_PLG_SIG_FB_PREVIOUS')."',
-                    ERROR: '".JText::_('JW_PLG_SIG_FB_REQUEST_CANNOT_BE_LOADED')."',
-                    PLAY_START: '".JText::_('JW_PLG_SIG_FB_START_SLIDESHOW')."',
-                    PLAY_STOP: '".JText::_('JW_PLG_SIG_FB_PAUSE_SLIDESHOW')."',
-                    FULL_SCREEN: '".JText::_('JW_PLG_SIG_FB_FULL_SCREEN')."',
-                    THUMBS: '".JText::_('JW_PLG_SIG_FB_THUMBS')."',
-                    DOWNLOAD: '".JText::_('JW_PLG_SIG_FB_DOWNLOAD')."',
-                    SHARE: '".JText::_('JW_PLG_SIG_FB_SHARE')."',
-                    ZOOM: '".JText::_('JW_PLG_SIG_FB_ZOOM')."'
+                    CLOSE: '".JText::_('JW_PLG_SIGF_FB_CLOSE')."',
+                    NEXT: '".JText::_('JW_PLG_SIGF_FB_NEXT')."',
+                    PREV: '".JText::_('JW_PLG_SIGF_FB_PREVIOUS')."',
+                    ERROR: '".JText::_('JW_PLG_SIGF_FB_REQUEST_CANNOT_BE_LOADED')."',
+                    PLAY_START: '".JText::_('JW_PLG_SIGF_FB_START_SLIDESHOW')."',
+                    PLAY_STOP: '".JText::_('JW_PLG_SIGF_FB_PAUSE_SLIDESHOW')."',
+                    FULL_SCREEN: '".JText::_('JW_PLG_SIGF_FB_FULL_SCREEN')."',
+                    THUMBS: '".JText::_('JW_PLG_SIGF_FB_THUMBS')."',
+                    DOWNLOAD: '".JText::_('JW_PLG_SIGF_FB_DOWNLOAD')."',
+                    SHARE: '".JText::_('JW_PLG_SIGF_FB_SHARE')."',
+                    ZOOM: '".JText::_('JW_PLG_SIGF_FB_ZOOM')."'
                 };
                 ".$customLanguage."
                 $.fancybox.defaults.lang = '".$fancybox_language."';
@@ -70,7 +70,7 @@ if(!defined('PE_FANCYBOX_LOADED')){
                     beforeShow: function(instance, current) {
                         if (current.type === 'image') {
                             var title = current.opts.\$orig.attr('title');
-                            current.opts.caption = (title.length ? '<b class=\"fancyboxCounter\">".JText::_('JW_PLG_SIG_FB_IMAGE')." ' + (current.index + 1) + ' ".JText::_('JW_PLG_SIG_FB_OF')." ' + instance.group.length + '</b>' + ' | ' + title : '');
+                            current.opts.caption = (title.length ? '<b class=\"fancyboxCounter\">".JText::_('JW_PLG_SIGF_FB_IMAGE')." ' + (current.index + 1) + ' ".JText::_('JW_PLG_SIGF_FB_OF')." ' + instance.group.length + '</b>' + ' | ' + title : '');
                         }
                     }
                 });

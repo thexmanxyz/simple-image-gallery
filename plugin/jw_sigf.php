@@ -1,9 +1,9 @@
 <?php
 /**
  * @version      4.1.0
- * @package      Simple Image Gallery (plugin)
- * @author       JoomlaWorks - https://www.joomlaworks.net
- * @copyright    Copyright (c) 2006 - 2020 JoomlaWorks Ltd. All rights reserved.
+ * @package      Simple Image Gallery Fork
+ * @author       Andreas Kar (thex) <andreas.kar@gmx.at>
+ * @copyright    Copyright © 2020 Andreas Kar. All rights reserved.
  * @license      GNU/GPL license: https://www.gnu.org/licenses/gpl.html
  */
 
@@ -15,15 +15,15 @@ if (version_compare(JVERSION, '2.5.0', 'ge')) {
     jimport('joomla.html.parameter');
 }
 
-class plgContentJw_sig extends JPlugin
+class plgContentJw_sigf extends JPlugin
 {
 
-    // JoomlaWorks reference parameters
-    public $plg_name             = "jw_sig";
+    // Reference parameters
+    public $plg_name             = "jw_sigf";
     public $plg_tag              = "gallery";
     public $plg_version          = "4.1.0";
-    public $plg_copyrights_start = "\n\n<!-- JoomlaWorks \"Simple Image Gallery\" Plugin (v4.1.0) starts here -->\n";
-    public $plg_copyrights_end   = "\n<!-- JoomlaWorks \"Simple Image Gallery\" Plugin (v4.1.0) ends here -->\n\n";
+    public $plg_copyrights_start = "\n\n<!-- \"Simple Image Gallery Fork\" Plugin (v4.1.0) starts here -->\n";
+    public $plg_copyrights_end   = "\n<!-- \"Simple Image Gallery Fork\" Plugin (v4.1.0) ends here -->\n\n";
 
     public function __construct(&$subject, $params)
     {
@@ -119,11 +119,11 @@ class plgContentJw_sig extends JPlugin
 
         // Check for basic requirements
         if (!extension_loaded('gd') && !function_exists('gd_info')) {
-            JError::raiseNotice('', JText::_('JW_PLG_SIG_NOTICE_01'));
+            JError::raiseNotice('', JText::_('JW_PLG_SIGF_NOTICE_01'));
             return;
         }
         if (!is_writable($sitePath.'/cache')) {
-            JError::raiseNotice('', JText::_('JW_PLG_SIG_NOTICE_02'));
+            JError::raiseNotice('', JText::_('JW_PLG_SIGF_NOTICE_02'));
             return;
         }
 
@@ -134,7 +134,7 @@ class plgContentJw_sig extends JPlugin
 
         // Check if Simple Image Gallery Free (old) is present and show a warning
         if (JPluginHelper::isEnabled('content', 'jw_simpleImageGallery') == true) {
-            JError::raiseNotice('', JText::_('JW_PLG_SIG_NOTICE_OLD_SIG'));
+            JError::raiseNotice('', JText::_('JW_PLG_SIGF_NOTICE_OLD_SIG'));
             return;
         }
 
@@ -166,17 +166,17 @@ class plgContentJw_sig extends JPlugin
         $showcaptions = 0;
         $cache_expire_time = $pluginParams->get('cache_expire_time', 3600) * 60; // Cache expiration time in minutes
         $fancybox_language = $pluginParams->get('fancybox_language', 'en');
-        $fancybox_close = $pluginParams->get('fancybox_close', JText::_('JW_PLG_SIG_FB_CLOSE'));
-        $fancybox_next = $pluginParams->get('fancybox_next', JText::_('JW_PLG_SIG_FB_NEXT'));
-        $fancybox_prev = $pluginParams->get('fancybox_prev', JText::_('JW_PLG_SIG_FB_PREVIOUS'));
-        $fancybox_error = $pluginParams->get('fancybox_error', JText::_('JW_PLG_SIG_FB_REQUEST_CANNOT_BE_LOADED'));
-        $fancybox_play_start = $pluginParams->get('fancybox_play_start', JText::_('JW_PLG_SIG_FB_START_SLIDESHOW'));
-        $fancybox_play_stop = $pluginParams->get('fancybox_play_stop', JText::_('JW_PLG_SIG_FB_PAUSE_SLIDESHOW'));
-        $fancybox_full_screen = $pluginParams->get('fancybox_full_screen', JText::_('JW_PLG_SIG_FB_FULL_SCREEN'));
-        $fancybox_thumbs = $pluginParams->get('fancybox_thumbs', JText::_('JW_PLG_SIG_FB_THUMBS'));
-        $fancybox_download = $pluginParams->get('fancybox_download', JText::_('JW_PLG_SIG_FB_DOWNLOAD'));
-        $fancybox_share = $pluginParams->get('fancybox_share', JText::_('JW_PLG_SIG_FB_SHARE'));
-        $fancybox_zoom = $pluginParams->get('fancybox_zoom', JText::_('JW_PLG_SIG_FB_ZOOM'));
+        $fancybox_close = $pluginParams->get('fancybox_close', JText::_('JW_PLG_SIGF_FB_CLOSE'));
+        $fancybox_next = $pluginParams->get('fancybox_next', JText::_('JW_PLG_SIGF_FB_NEXT'));
+        $fancybox_prev = $pluginParams->get('fancybox_prev', JText::_('JW_PLG_SIGF_FB_PREVIOUS'));
+        $fancybox_error = $pluginParams->get('fancybox_error', JText::_('JW_PLG_SIGF_FB_REQUEST_CANNOT_BE_LOADED'));
+        $fancybox_play_start = $pluginParams->get('fancybox_play_start', JText::_('JW_PLG_SIGF_FB_START_SLIDESHOW'));
+        $fancybox_play_stop = $pluginParams->get('fancybox_play_stop', JText::_('JW_PLG_SIGF_FB_PAUSE_SLIDESHOW'));
+        $fancybox_full_screen = $pluginParams->get('fancybox_full_screen', JText::_('JW_PLG_SIGF_FB_FULL_SCREEN'));
+        $fancybox_thumbs = $pluginParams->get('fancybox_thumbs', JText::_('JW_PLG_SIGF_FB_THUMBS'));
+        $fancybox_download = $pluginParams->get('fancybox_download', JText::_('JW_PLG_SIGF_FB_DOWNLOAD'));
+        $fancybox_share = $pluginParams->get('fancybox_share', JText::_('JW_PLG_SIGF_FB_SHARE'));
+        $fancybox_zoom = $pluginParams->get('fancybox_zoom', JText::_('JW_PLG_SIGF_FB_ZOOM'));
         $fancybox_version = $pluginParams->get('fancybox_version', '3.5.7');
 
         // Advanced
@@ -234,21 +234,21 @@ class plgContentJw_sig extends JPlugin
                 $gal_id = substr(md5($key.$srcimgfolder), 1, 10);
 
                 // Render the gallery
-                $SIGHelper = new SimpleImageGalleryHelper();
+                $SIGFHelper = new SimpleImageGalleryForkHelper();
 
-                $SIGHelper->srcimgfolder = $srcimgfolder;
-                $SIGHelper->thb_width = $thb_width;
-                $SIGHelper->thb_height = $thb_height;
-                $SIGHelper->smartResize = $smartResize;
-                $SIGHelper->jpg_quality = $jpg_quality;
-                $SIGHelper->cache_expire_time = $cache_expire_time;
-                $SIGHelper->gal_id = $gal_id;
-                $SIGHelper->format = $format;
+                $SIGFHelper->srcimgfolder = $srcimgfolder;
+                $SIGFHelper->thb_width = $thb_width;
+                $SIGFHelper->thb_height = $thb_height;
+                $SIGFHelper->smartResize = $smartResize;
+                $SIGFHelper->jpg_quality = $jpg_quality;
+                $SIGFHelper->cache_expire_time = $cache_expire_time;
+                $SIGFHelper->gal_id = $gal_id;
+                $SIGFHelper->format = $format;
 
-                $gallery = $SIGHelper->renderGallery();
+                $gallery = $SIGFHelper->renderGallery();
 
                 if (!$gallery) {
-                    JError::raiseNotice('', JText::_('JW_PLG_SIG_NOTICE_03').' '.$srcimgfolder);
+                    JError::raiseNotice('', JText::_('JW_PLG_SIGF_NOTICE_03').' '.$srcimgfolder);
                     continue;
                 }
 
@@ -333,7 +333,7 @@ class plgContentJw_sig extends JPlugin
                         $customLinkAttributes = ' '.$customLinkAttributes;
                     }
 
-                    $pluginCSS = $SIGHelper->getTemplatePath($this->plg_name, 'css/template.css', $thb_template);
+                    $pluginCSS = $SIGFHelper->getTemplatePath($this->plg_name, 'css/template.css', $thb_template);
                     $pluginCSS = $pluginCSS->http;
                     $document->addStyleSheet($pluginCSS.'?v='.$this->plg_version);
                 }
@@ -343,7 +343,7 @@ class plgContentJw_sig extends JPlugin
 
                 // Fetch the template
                 ob_start();
-                $templatePath = $SIGHelper->getTemplatePath($this->plg_name, 'default.php', $thb_template);
+                $templatePath = $SIGFHelper->getTemplatePath($this->plg_name, 'default.php', $thb_template);
                 $templatePath = $templatePath->file;
                 include $templatePath;
                 $getTemplate = $this->plg_copyrights_start.ob_get_contents().$this->plg_copyrights_end;
