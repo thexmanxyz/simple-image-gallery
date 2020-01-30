@@ -18,12 +18,16 @@ The plugin is ideal for any type of website: from personal ones (where you'd pos
 - You can set a [root folder](https://github.com/thexmanxyz/simple-image-gallery-fork#root-folder) in the plugin backend configuration if you all your gallery folders are located under a single common path.
 - You can use [MVC overrides](https://github.com/thexmanxyz/simple-image-gallery-fork#frontend-styling) to change the appearance of the thumbnail grid on your site.
 - Uses the core Joomla updater.
+- Supports JPEG, PNG, GIF and WEBP as source images.
 - Uses fancyBox 3 for the lightbox/modal previews.
 - Configurable fancyBox version.
 - Allows printing the image gallery grid when using the print preview feature available in most Joomla components (including the default article system and K2).
 - Customizable labeling of GUI element.
 - German and English translation supported out of the box.
 - Disabling of MooTools supported.
+
+## Migration
+Migrating from [Simple Image Gallery](https://github.com/joomlaworks/simple-image-gallery) is very simple. Either uninstall the plugin or just disable it. No necessity to change existing `{gallery}{/gallery}` tags. The existing configuration of the original plugin will not be migrated and the thumbnail cache requires to be rebuild.
 
 ## Customization and Configuration
 In the following paragraphs we will discuss important configuration options of the plugin and how the frontend appearance of galleries can be customized.

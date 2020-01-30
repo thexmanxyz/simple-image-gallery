@@ -12,6 +12,7 @@
     <config>
         <fields name="params">
             <fieldset name="basic">
+                <field name="show_copyright" type="checkbox" checked="1" label="JW_PLG_SIGF_SHOW_COPYRIGHT" description="JW_PLG_SIGF_SHOW_COPYRIGHT_DESC" value="1" />
                 <field name="galleries_rootfolder" type="text" default="images" label="JW_PLG_SIGF_ROOTFOLDER" description="JW_PLG_SIGF_ROOTFOLDER_DESC" />
                 <field name="mootools" type="checkbox" checked="1" label="JW_PLG_SIGF_MOOTOOLS" description="JW_PLG_SIGF_MOOTOOLS_DESC" value="1" />
                 <field name="thb_width" type="text" default="360" size="3" label="JW_PLG_SIGF_TW" description="JW_PLG_SIGF_TW_DESC" />
@@ -19,6 +20,7 @@
                 <field name="jpg_quality" type="text" default="90" size="3" label="JW_PLG_SIGF_TQ" description="JW_PLG_SIGF_TQ_DESC" />
                 <field name="cache_expire_time" type="text" default="86400" size="3" label="JW_PLG_SIGF_TCEXP" description="JW_PLG_SIGF_TCEXP_DESC" />
                 <field name="memoryLimit" type="text" default="" size="3" label="JW_PLG_SIGF_ML" description="JW_PLG_SIGF_ML_DESC" />
+                <field name="fancybox_cdn" type="checkbox" checked="1" label="JW_PLG_SIGF_FB_CDN" description="JW_PLG_SIGF_FB_CDN_DESC" value="1" />
                 <field name="fancybox_language" type="list" default="en" label="JW_PLG_SIGF_FB_LANG" description="JW_PLG_SIGF_FB_LANG_DESC">
                     <option value="en">JW_PLG_SIGF_FB_LANG_OPT_EN</option>
                     <option value="de">JW_PLG_SIGF_FB_LANG_OPT_DE</option>

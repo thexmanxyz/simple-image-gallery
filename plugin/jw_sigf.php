@@ -127,17 +127,6 @@ class plgContentJw_sigf extends JPlugin
             return;
         }
 
-        // Check if Simple Image Gallery Pro is present and mute
-        if (JPluginHelper::isEnabled('content', 'jw_sigpro') == true) {
-            return;
-        }
-
-        // Check if Simple Image Gallery Free (old) is present and show a warning
-        if (JPluginHelper::isEnabled('content', 'jw_simpleImageGallery') == true) {
-            JError::raiseNotice('', JText::_('JW_PLG_SIGF_NOTICE_OLD_SIG'));
-            return;
-        }
-
         // ----------------------------------- Get plugin parameters -----------------------------------
 
         // Get plugin info
@@ -154,6 +143,7 @@ class plgContentJw_sigf extends JPlugin
 
         $pluginParams = class_exists('JParameter') ? new JParameter($plugin->params) : new JRegistry($plugin->params);
 
+        $show_copyright = $pluginParams->get('show_copyright', 1);
         $galleries_rootfolder = ($params->get('galleries_rootfolder')) ? $params->get('galleries_rootfolder') : $pluginParams->get('galleries_rootfolder', $defaultImagePath);
         $popup_engine = 'jquery_fancybox';
         $mootools = $pluginParams->get('mootools', 1);
@@ -165,6 +155,7 @@ class plgContentJw_sigf extends JPlugin
         $jpg_quality = $pluginParams->get('jpg_quality', 80);
         $showcaptions = 0;
         $cache_expire_time = $pluginParams->get('cache_expire_time', 3600) * 60; // Cache expiration time in minutes
+        $fancybox_cdn = $pluginParams->get('fancybox_cdn', 1);
         $fancybox_language = $pluginParams->get('fancybox_language', 'en');
         $fancybox_close = $pluginParams->get('fancybox_close', JText::_('JW_PLG_SIGF_FB_CLOSE'));
         $fancybox_next = $pluginParams->get('fancybox_next', JText::_('JW_PLG_SIGF_FB_NEXT'));
@@ -318,7 +309,11 @@ class plgContentJw_sigf extends JPlugin
                     }
 
                     if ($legacyHeadIncludes) {
-                        $document->addCustomTag($this->plg_copyrights_start.$legacyHeadIncludes.$this->plg_copyrights_end);
+                        if($show_copyright) {
+                            $document->addCustomTag($this->plg_copyrights_start.$legacyHeadIncludes.$this->plg_copyrights_end);
+                        } else {
+                            $document->addCustomTag($legacyHeadIncludes);
+                        }
                     }
 
                     if ($extraClass) {
@@ -346,7 +341,13 @@ class plgContentJw_sigf extends JPlugin
                 $templatePath = $SIGFHelper->getTemplatePath($this->plg_name, 'default.php', $thb_template);
                 $templatePath = $templatePath->file;
                 include $templatePath;
-                $getTemplate = $this->plg_copyrights_start.ob_get_contents().$this->plg_copyrights_end;
+
+                if($show_copyright) {
+                    $getTemplate = $this->plg_copyrights_start.ob_get_contents().$this->plg_copyrights_end;
+                } else {
+                    $getTemplate = ob_get_contents();
+                }
+
                 ob_end_clean();
 
                 // Output

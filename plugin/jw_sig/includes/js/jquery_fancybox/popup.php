@@ -12,13 +12,14 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 
 $extraClass = 'fancybox-gallery';
 $customLinkAttributes = 'data-fancybox="gallery'.$gal_id.'"';
+$fancyBoxPath = $fancybox_cdn ? 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@' . $fancybox_version . '/dist/' : '';
 
 $stylesheets = array(
-    'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@'.$fancybox_version.'/dist/jquery.fancybox.min.css'
+    $fancyBoxPath . 'jquery.fancybox.min.css'
 );
 $stylesheetDeclarations = array();
 $scripts = array(
-    'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@'.$fancybox_version.'/dist/jquery.fancybox.min.js'
+    $fancyBoxPath . 'jquery.fancybox.min.js'
 );
 
 if(!defined('PE_FANCYBOX_LOADED')){

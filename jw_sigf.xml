@@ -10,6 +10,7 @@
     <description>JW_PLG_SIGF_XML_DESC</description>
     <!-- Parameters -->
     <params>
+        <param name="show_copyright" type="checkbox" checked="1" label="JW_PLG_SIGF_SHOW_COPYRIGHT" description="JW_PLG_SIGF_SHOW_COPYRIGHT_DESC" value="1" />
         <param name="galleries_rootfolder" type="text" default="images/stories" label="JW_PLG_SIGF_ROOTFOLDER" description="JW_PLG_SIGF_ROOTFOLDER_DESC" />
         <param name="mootools" type="checkbox" checked="1" label="JW_PLG_SIGF_MOOTOOLS" description="JW_PLG_SIGF_MOOTOOLS_DESC" value="1" />
         <param name="jQueryHandling" type="list" default="1.12.4" label="JW_PLG_SIGF_JQUERY_HANDLING" description="JW_PLG_SIGF_JQUERY_HANDLING_DESC">
@@ -25,6 +26,7 @@
         <param name="jpg_quality" type="text" default="90" size="6" label="JW_PLG_SIGF_TQ" description="JW_PLG_SIGF_TQ_DESC" />
         <param name="cache_expire_time" type="text" default="86400" size="6" label="JW_PLG_SIGF_TCEXP" description="JW_PLG_SIGF_TCEXP_DESC" />
         <param name="memoryLimit" type="text" default="" size="6" label="JW_PLG_SIGF_ML" description="JW_PLG_SIGF_ML_DESC" />
+        <param name="fancybox_cdn" type="checkbox" checked="1" label="JW_PLG_SIGF_FB_CDN" description="JW_PLG_SIGF_FB_CDN_DESC" value="1" />
         <param name="fancybox_language" type="list" default="en" label="JW_PLG_SIGF_FB_LANG" description="JW_PLG_SIGF_FB_LANG_DESC">
             <option value="en">JW_PLG_SIGF_FB_LANG_OPT_EN</option>
             <option value="de">JW_PLG_SIGF_FB_LANG_OPT_DE</option>
