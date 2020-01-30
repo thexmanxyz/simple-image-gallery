@@ -6,7 +6,7 @@
     <copyright>Copyright © 2020 Andreas Kar. All rights reserved.</copyright>
     <creationDate>27.01.2020</creationDate>
     <license>https://www.gnu.org/licenses/gpl.html GNU/GPL</license>
-    <version>4.1.0</version>
+    <version>4.2.0</version>
     <description>JW_PLG_SIGF_XML_DESC</description>
     <!-- Parameters -->
     <config>
@@ -50,6 +50,6 @@
         <language tag="en-GB">language/en-GB/en-GB.plg_content_jw_sigf.sys.ini</language>
     </languages>
     <updateservers>
-        <server type="extension" priority="1" name="Simple Image Gallery">https://cdn.joomlaworks.org/updates/sig.xml</server>
+        <server type="extension" priority="1" name="Simple Image Gallery Fork">https://update.gantryprojects.com/sigf/sigf.xml</server>
     </updateservers>
 </extension>

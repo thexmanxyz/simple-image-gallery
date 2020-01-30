@@ -1,6 +1,6 @@
 <?php
 /**
- * @version      4.1.0
+ * @version      4.2.0
  * @package      Simple Image Gallery Fork
  * @author       Andreas Kar (thex) <andreas.kar@gmx.at>
  * @copyright    Copyright © 2020 Andreas Kar. All rights reserved.
@@ -21,9 +21,9 @@ class plgContentJw_sigf extends JPlugin
     // Reference parameters
     public $plg_name             = "jw_sigf";
     public $plg_tag              = "gallery";
-    public $plg_version          = "4.1.0";
-    public $plg_copyrights_start = "\n\n<!-- \"Simple Image Gallery Fork\" Plugin (v4.1.0) starts here -->\n";
-    public $plg_copyrights_end   = "\n<!-- \"Simple Image Gallery Fork\" Plugin (v4.1.0) ends here -->\n\n";
+    public $plg_version          = "4.2.0";
+    public $plg_copyrights_start = "\n\n<!-- \"Simple Image Gallery Fork\" Plugin (v4.2.0) starts here -->\n";
+    public $plg_copyrights_end   = "\n<!-- \"Simple Image Gallery Fork\" Plugin (v4.2.0) ends here -->\n\n";
 
     public function __construct(&$subject, $params)
     {

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<updates>
+	<update>
+		<name>Simple Image Gallery Fork</name>
+		<description>Fork of the popular image gallery extension for Joomla</description>
+		<element>jw_sigf</element>
+		<type>plugin</type>
+		<folder>content</folder>
+		<version>4.2.0</version>
+		<infourl title="Simple Image Gallery Fork Release Notes">https://github.com/thexmanxyz/simple-image-gallery-fork/releases/tag/4.2.0</infourl>
+		<downloads>
+			<downloadurl type="full" format="zip">https://github.com/thexmanxyz/simple-image-gallery-fork/archive/4.2.0.zip</downloadurl>
+		</downloads>
+		<tags>
+			<tag>stable</tag>
+		</tags>
+		<maintainer>Andreas Kar</maintainer>
+		<maintainerurl></maintainerurl>
+		<section>Updates</section>
+		<targetplatform name="joomla" version="4.[0123456789]"/>
+		<client>0</client>
+	</update>
+	<update>
+		<name>Simple Image Gallery Fork</name>
+		<description>Fork of the popular image gallery extension for Joomla</description>
+		<element>jw_sigf</element>
+		<type>plugin</type>
+		<folder>content</folder>
+		<version>4.2.0</version>
+		<infourl title="Simple Image Gallery Fork Release Notes">https://github.com/thexmanxyz/simple-image-gallery-fork/releases/tag/4.2.0</infourl>
+		<downloads>
+			<downloadurl type="full" format="zip">https://github.com/thexmanxyz/simple-image-gallery-fork/archive/4.2.0.zip</downloadurl>
+		</downloads>
+		<tags>
+			<tag>stable</tag>
+		</tags>
+		<maintainer>Andreas Kar</maintainer>
+		<maintainerurl></maintainerurl>
+		<section>Updates</section>
+		<targetplatform name="joomla" version="3.[0123456789]"/>
+		<client>0</client>
+	</update>
+	<update>
+		<name>Simple Image Gallery Fork</name>
+		<description>Fork of the popular image gallery extension for Joomla</description>
+		<element>jw_sigf</element>
+		<type>plugin</type>
+		<folder>content</folder>
+		<version>4.2.0</version>
+		<infourl title="Simple Image Gallery Fork Release Notes">https://github.com/thexmanxyz/simple-image-gallery-fork/releases/tag/4.2.0</infourl>
+		<downloads>
+			<downloadurl type="full" format="zip">https://github.com/thexmanxyz/simple-image-gallery-fork/archive/4.2.0.zip</downloadurl>
+		</downloads>
+		<tags>
+			<tag>stable</tag>
+		</tags>
+		<maintainer>Andreas Kar</maintainer>
+		<maintainerurl></maintainerurl>
+		<section>Updates</section>
+		<targetplatform name="joomla" version="2.5"/>
+		<client>0</client>
+	</update>
+</updates>
