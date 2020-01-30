@@ -266,7 +266,7 @@ class plgContentJw_sigf extends JPlugin
                         } elseif (version_compare(JVERSION, '2.5.0', 'ge')) {
                             JHtml::_('behavior.framework');
                         } else {
-                            JHTML::_('behavior.mootools');
+                            JHtml::_('behavior.mootools');
                         }
                     }
 
