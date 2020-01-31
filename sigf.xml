@@ -54,31 +54,30 @@
         <param name="fancybox_button_fullscreen" type="list" default="on" label="PLG_SIGF_FB_BUTTON_FULLSCREEN" description="PLG_SIGF_FB_BUTTON_FULLSCREEN_DESC">
             <option value="on">PLG_SIGF_FB_BUTTON_FULLSCREEN_OPT_ON</option>
             <option value="off">PLG_SIGF_FB_BUTTON_FULLSCREEN_OPT_OFF</option>
-        </param>				
+        </param>
         <param name="fancybox_button_thumbs" type="list" default="on" label="PLG_SIGF_FB_BUTTON_THUMBS" description="PLG_SIGF_FB_BUTTON_THUMBS_DESC">
             <option value="on">PLG_SIGF_FB_BUTTON_THUMBS_OPT_ON</option>
             <option value="off">PLG_SIGF_FB_BUTTON_THUMBS_OPT_OFF</option>
-        </param>					
+        </param>
         <param name="fancybox_button_share" type="list" default="on" label="PLG_SIGF_FB_BUTTON_SHARE" description="PLG_SIGF_FB_BUTTON_SHARE_DESC">
             <option value="on">PLG_SIGF_FB_BUTTON_SHARE_OPT_ON</option>
             <option value="off">PLG_SIGF_FB_BUTTON_SHARE_OPT_OFF</option>
-        </param>	
+        </param>
         <param name="fancybox_button_download" type="list" default="on" label="PLG_SIGF_FB_BUTTON_DOWNLOAD" description="PLG_SIGF_FB_BUTTON_DOWNLOAD_DESC">
             <option value="on">PLG_SIGF_FB_BUTTON_DOWNLOAD_OPT_ON</option>
             <option value="off">PLG_SIGF_FB_BUTTON_DOWNLOAD_OPT_OFF</option>
-        </param>	
-        <param name="fancybox_button_zoom" type="list" default="on" label="PLG_SIGF_FB_BUTTON_ZOOM" description="PLG_SIGF_FB_BUTTON_ZOOM_DESC">
+        </param>
+        <param name="fancybox_button_zoom" type="list" default="off" label="PLG_SIGF_FB_BUTTON_ZOOM" description="PLG_SIGF_FB_BUTTON_ZOOM_DESC">
             <option value="on">PLG_SIGF_FB_BUTTON_ZOOM_OPT_ON</option>
             <option value="off">PLG_SIGF_FB_BUTTON_ZOOM_OPT_OFF</option>
-        </param>	
+        </param>
         <param name="fancybox_button_close" type="list" default="on" label="PLG_SIGF_FB_BUTTON_CLOSE" description="PLG_SIGF_FB_BUTTON_CLOSE_DESC">
             <option value="on">PLG_SIGF_FB_BUTTON_CLOSE_OPT_ON</option>
             <option value="off">PLG_SIGF_FB_BUTTON_CLOSE_OPT_OFF</option>
         </param>
         <param type="spacer" default="PLG_SIGF_SPACER_FB_LABELING" />
         <param name="fancybox_language" type="list" default="en" label="PLG_SIGF_FB_LANG" description="PLG_SIGF_FB_LANG_DESC">
-            <option value="en">PLG_SIGF_FB_LANG_OPT_EN</option>
-            <option value="de">PLG_SIGF_FB_LANG_OPT_DE</option>
+            <option value="en">PLG_SIGF_FB_LANG_OPT_DEFAULT</option>
             <option value="xx">PLG_SIGF_FB_LANG_OPT_XX</option>
         </param>
         <param name="fancybox_close" type="text" default="" hint="PLG_SIGF_FB_CLOSE" label="PLG_SIGF_FB_LANG_CLOSE" description="PLG_SIGF_FB_LANG_CLOSE_DESC" />
@@ -101,5 +100,7 @@
     <languages folder="plugin">
         <language tag="en-GB">language/en-GB/en-GB.plg_content_sigf.ini</language>
         <language tag="en-GB">language/en-GB/en-GB.plg_content_sigf.sys.ini</language>
+        <language tag="de-DE">language/de-DE/de-DE.plg_content_sigf.ini</language>
+        <language tag="de-DE">language/de-DE/de-DE.plg_content_sigf.sys.ini</language>
     </languages>
 </install>

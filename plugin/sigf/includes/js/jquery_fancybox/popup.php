@@ -24,35 +24,35 @@ $scripts = array(
 
 $buttons = '';
 if($fancybox_button_slideshow == 'on') {
-	$buttons .= '\'slideShow\',';
+    $buttons .= '\'slideShow\',';
 }
 if($fancybox_button_fullscreen == 'on') {
-	$buttons .= '\'fullScreen\',';
+    $buttons .= '\'fullScreen\',';
 }
 if($fancybox_button_thumbs == 'on') {
-	$buttons .= '\'thumbs\',';
+    $buttons .= '\'thumbs\',';
 }
 if($fancybox_button_share == 'on') {
-	$buttons .= '\'share\',';
+    $buttons .= '\'share\',';
 }
 if($fancybox_button_download == 'on') {
-	$buttons .= '\'download\',';
+    $buttons .= '\'download\',';
 }
 if($fancybox_button_zoom == 'on') {
-	$buttons .= '\'zoom\',';
+    $buttons .= '\'zoom\',';
 }
 if($fancybox_button_close == 'on') {
-	$buttons .= '\'close\',';
+    $buttons .= '\'close\',';
 }
 if(strlen($buttons) > 0) {
-	$buttons = rtrim($buttons, ',');
+    $buttons = rtrim($buttons, ',');
 }
 
 if(!defined('PE_FANCYBOX_LOADED')){
     define('PE_FANCYBOX_LOADED', true);
     $customLanguage = '';
     if($fancybox_language == 'xx') {
-        $customLanguage = "$.fancybox.defaults.i18n.en = {
+        $customLanguage = "$.fancybox.defaults.i18n.xx = {
                     CLOSE: '".$fancybox_close."',
                     NEXT: '".$fancybox_next."',
                     PREV: '".$fancybox_prev."',

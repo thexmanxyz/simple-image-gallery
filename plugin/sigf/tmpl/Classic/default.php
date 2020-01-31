@@ -12,7 +12,7 @@ defined('_JEXEC') or die('Restricted access');
 
 $targetAttr = '';
 if($fancybox_image_target != '_self') {
-	$targetAttr = ' target="' . $fancybox_image_target . '"';
+    $targetAttr = ' target="' . $fancybox_image_target . '"';
 }
 ?>
 
