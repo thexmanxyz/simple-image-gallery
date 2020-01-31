@@ -33,9 +33,10 @@
         <param name="cache_expire_time" type="text" default="86400" size="6" label="JW_PLG_SIGF_TCEXP" description="JW_PLG_SIGF_TCEXP_DESC" />
         <param name="memoryLimit" type="text" default="" size="6" label="JW_PLG_SIGF_ML" description="JW_PLG_SIGF_ML_DESC" />
         <param name="fancybox_cdn" type="list" default="on" label="JW_PLG_SIGF_FB_CDN" description="JW_PLG_SIGF_FB_CDN_DESC">
-            <option value="on">JW_PLG_SIGF_FB_CDN_OPN_ON</option>
+            <option value="on">JW_PLG_SIGF_FB_CDN_OPT_ON</option>
             <option value="off">JW_PLG_SIGF_FB_CDN_OPT_OFF</option>
         </param>
+        <param name="fancybox_version" type="text" hint="3.5.7" default="3.5.7" label="JW_PLG_SIGF_FB_VERSION" description="JW_PLG_SIGF_FB_VERSION_DESC" />
         <param name="fancybox_language" type="list" default="en" label="JW_PLG_SIGF_FB_LANG" description="JW_PLG_SIGF_FB_LANG_DESC">
             <option value="en">JW_PLG_SIGF_FB_LANG_OPT_EN</option>
             <option value="de">JW_PLG_SIGF_FB_LANG_OPT_DE</option>
@@ -58,7 +59,6 @@
         <param name="fancybox_download" type="text" default="" hint="JW_PLG_SIGF_FB_DOWNLOAD" label="JW_PLG_SIGF_FB_LANG_DOWNLOAD" description="JW_PLG_SIGF_FB_LANG_DOWNLOAD_DESC" />
         <param name="fancybox_share" type="text" default="" hint="JW_PLG_SIGF_FB_SHARE" label="JW_PLG_SIGF_FB_LANG_SHARE" description="JW_PLG_SIGF_FB_LANG_SHARE_DESC" />
         <param name="fancybox_zoom" type="text" default="" hint="JW_PLG_SIGF_FB_ZOOM" label="JW_PLG_SIGF_FB_LANG_ZOOM" description="JW_PLG_SIGF_FB_LANG_ZOOM_DESC" />
-        <param name="fancybox_version" type="text" hint="3.5.7" default="3.5.7" label="JW_PLG_SIGF_FB_VERSION" description="JW_PLG_SIGF_FB_VERSION_DESC" />
     </params>
     <!-- Files -->
     <files folder="plugin" destination="jw_sigf">
