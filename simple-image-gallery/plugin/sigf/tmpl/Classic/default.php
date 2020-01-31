@@ -19,8 +19,8 @@ if($fancybox_image_target != '_self') {
 <ul id="sigfId<?php echo $gal_id; ?>" class="sigfContainer sigfClassic<?php echo $extraWrapperClass; ?>">
     <?php foreach($gallery as $count=>$photo): ?>
     <li class="sigfThumb">
-        <a href="<?php echo $photo->sourceImageFilePath; ?>" class="sigfLink<?php echo $extraClass; ?>" style="width:<?php echo $photo->width; ?>px;height:<?php echo $photo->height; ?>px;" title="<?php echo JText::_('JW_PLG_SIGF_YOU_ARE_VIEWING').' '.$photo->filename; ?>" data-thumb="<?php echo $photo->thumbImageFilePath; ?>"<?php echo $targetAttr; ?><?php echo $customLinkAttributes; ?>>
-            <img class="sigfImg" src="<?php echo $transparent; ?>" alt="<?php echo JText::_('JW_PLG_SIGF_CLICK_TO_ENLARGE_IMAGE').' '.$photo->filename; ?>" title="<?php echo JText::_('JW_PLG_SIGF_CLICK_TO_ENLARGE_IMAGE').' '.$photo->filename; ?>" style="width:<?php echo $photo->width; ?>px;height:<?php echo $photo->height; ?>px;background-image:url('<?php echo $photo->thumbImageFilePath; ?>');" />
+        <a href="<?php echo $photo->sourceImageFilePath; ?>" class="sigfLink<?php echo $extraClass; ?>" style="width:<?php echo $photo->width; ?>px;height:<?php echo $photo->height; ?>px;" title="<?php echo JText::_('PLG_SIGF_YOU_ARE_VIEWING').' '.$photo->filename; ?>" data-thumb="<?php echo $photo->thumbImageFilePath; ?>"<?php echo $targetAttr; ?><?php echo $customLinkAttributes; ?>>
+            <img class="sigfImg" src="<?php echo $transparent; ?>" alt="<?php echo JText::_('PLG_SIGF_CLICK_TO_ENLARGE_IMAGE').' '.$photo->filename; ?>" title="<?php echo JText::_('PLG_SIGF_CLICK_TO_ENLARGE_IMAGE').' '.$photo->filename; ?>" style="width:<?php echo $photo->width; ?>px;height:<?php echo $photo->height; ?>px;background-image:url('<?php echo $photo->thumbImageFilePath; ?>');" />
         </a>
     </li>
     <?php endforeach; ?>

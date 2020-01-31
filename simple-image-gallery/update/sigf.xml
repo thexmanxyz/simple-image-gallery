@@ -3,7 +3,7 @@
     <update>
         <name>Simple Image Gallery Fork</name>
         <description>Fork of the popular image gallery extension for Joomla</description>
-        <element>jw_sigf</element>
+        <element>sigf</element>
         <type>plugin</type>
         <folder>content</folder>
         <version>4.2.0</version>
@@ -23,7 +23,7 @@
     <update>
         <name>Simple Image Gallery Fork</name>
         <description>Fork of the popular image gallery extension for Joomla</description>
-        <element>jw_sigf</element>
+        <element>sigf</element>
         <type>plugin</type>
         <folder>content</folder>
         <version>4.2.0</version>
@@ -43,7 +43,7 @@
     <update>
         <name>Simple Image Gallery Fork</name>
         <description>Fork of the popular image gallery extension for Joomla</description>
-        <element>jw_sigf</element>
+        <element>sigf</element>
         <type>plugin</type>
         <folder>content</folder>
         <version>4.2.0</version>

@@ -70,17 +70,17 @@ if(!defined('PE_FANCYBOX_LOADED')){
         (function($) {
             $(document).ready(function() {
                 $.fancybox.defaults.i18n.en = {
-                    CLOSE: '".JText::_('JW_PLG_SIGF_FB_CLOSE')."',
-                    NEXT: '".JText::_('JW_PLG_SIGF_FB_NEXT')."',
-                    PREV: '".JText::_('JW_PLG_SIGF_FB_PREVIOUS')."',
-                    ERROR: '".JText::_('JW_PLG_SIGF_FB_REQUEST_CANNOT_BE_LOADED')."',
-                    PLAY_START: '".JText::_('JW_PLG_SIGF_FB_START_SLIDESHOW')."',
-                    PLAY_STOP: '".JText::_('JW_PLG_SIGF_FB_PAUSE_SLIDESHOW')."',
-                    FULL_SCREEN: '".JText::_('JW_PLG_SIGF_FB_FULL_SCREEN')."',
-                    THUMBS: '".JText::_('JW_PLG_SIGF_FB_THUMBS')."',
-                    DOWNLOAD: '".JText::_('JW_PLG_SIGF_FB_DOWNLOAD')."',
-                    SHARE: '".JText::_('JW_PLG_SIGF_FB_SHARE')."',
-                    ZOOM: '".JText::_('JW_PLG_SIGF_FB_ZOOM')."'
+                    CLOSE: '".JText::_('PLG_SIGF_FB_CLOSE')."',
+                    NEXT: '".JText::_('PLG_SIGF_FB_NEXT')."',
+                    PREV: '".JText::_('PLG_SIGF_FB_PREVIOUS')."',
+                    ERROR: '".JText::_('PLG_SIGF_FB_REQUEST_CANNOT_BE_LOADED')."',
+                    PLAY_START: '".JText::_('PLG_SIGF_FB_START_SLIDESHOW')."',
+                    PLAY_STOP: '".JText::_('PLG_SIGF_FB_PAUSE_SLIDESHOW')."',
+                    FULL_SCREEN: '".JText::_('PLG_SIGF_FB_FULL_SCREEN')."',
+                    THUMBS: '".JText::_('PLG_SIGF_FB_THUMBS')."',
+                    DOWNLOAD: '".JText::_('PLG_SIGF_FB_DOWNLOAD')."',
+                    SHARE: '".JText::_('PLG_SIGF_FB_SHARE')."',
+                    ZOOM: '".JText::_('PLG_SIGF_FB_ZOOM')."'
                 };
                 ".$customLanguage."
                 $.fancybox.defaults.lang = '".$fancybox_language."';
@@ -89,7 +89,7 @@ if(!defined('PE_FANCYBOX_LOADED')){
                     beforeShow: function(instance, current) {
                         if (current.type === 'image') {
                             var title = current.opts.\$orig.attr('title');
-                            current.opts.caption = (title.length ? '<b class=\"fancyboxCounter\">".JText::_('JW_PLG_SIGF_FB_IMAGE')." ' + (current.index + 1) + ' ".JText::_('JW_PLG_SIGF_FB_OF')." ' + instance.group.length + '</b>' + ' | ' + title : '');
+                            current.opts.caption = (title.length ? '<b class=\"fancyboxCounter\">".JText::_('PLG_SIGF_FB_IMAGE')." ' + (current.index + 1) + ' ".JText::_('PLG_SIGF_FB_OF')." ' + instance.group.length + '</b>' + ' | ' + title : '');
                         }
                     }
                 });

@@ -38,8 +38,8 @@ When you maintain multiple image galleries across your site it makes sense to de
 To get a feeling on how this works let's take a look on an example. If your "root folder" is located under `images/galleries` and you want to maintain three galleries, just create for each one a sub folder (e.g. `images/galleries/gallery1`, `images/galleries/gallery2` and `images/galleries/gallery3`). When you want to embed them within your content just use the following gallery tags `{gallery}gallery1{/gallery}`, `{gallery}gallery2{/gallery}` and `{gallery}gallery3{/gallery}`.
 
 ### Frontend Styling
-1. Copy the folder content of `/plugin/jw_sigf/tmpl/Classic` to `/templates/TEMPLATE/html/jw_sigf/Classic`. If the folders `jw_sigf` and `Classic` do not exist under `/templates/TEMPLATE/html`, create them.
-2. Modify the HTML and CSS files in the `/templates/TEMPLATE/html/jw_sigf/Classic` folder until the appearance matches your needs.
+1. Copy the folder content of `/plugin/sigf/tmpl/Classic` to `/templates/TEMPLATE/html/sigf/Classic`. If the folders `sigf` and `Classic` do not exist under `/templates/TEMPLATE/html`, create them.
+2. Modify the HTML and CSS files in the `/templates/TEMPLATE/html/sigf/Classic` folder until the appearance matches your needs.
 
 **Info:** The name of the actual `TEMPLATE` folder depends on the actual template you want the styling to apply to.
 
