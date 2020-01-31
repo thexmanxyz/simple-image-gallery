@@ -45,10 +45,10 @@ class SimpleImageGalleryForkHelper
         }
 
         // Internal parameters
-        $prefix = "sigf_cache_";
+        $prefix = "jw_sigf_cache_";
 
         // Set the cache folder
-        $cacheFolderPath = JPATH_SITE.'/cache/sigf';
+        $cacheFolderPath = JPATH_SITE.'/cache/jw_sigf';
         if (file_exists($cacheFolderPath) && is_dir($cacheFolderPath)) {
             // all OK
         } else {
@@ -143,7 +143,7 @@ class SimpleImageGalleryForkHelper
 
                 // Bail out if the image resource is not OK
                 if (!$source) {
-                    JError::raiseNotice('', JText::_('PLG_SIGF_ERROR_SRC_IMGS'));
+                    JError::raiseNotice('', JText::_('JW_PLG_SIGF_ERROR_SRC_IMGS'));
                     return;
                 }
 
@@ -175,7 +175,7 @@ class SimpleImageGalleryForkHelper
             // Assemble the image elements
             $gallery[$key]->filename = $filename;
             $gallery[$key]->sourceImageFilePath = $siteUrl.$srcimgfolder.'/'.$this->replaceWhiteSpace($filename);
-            $gallery[$key]->thumbImageFilePath = $siteUrl.'cache/sigf/'.$prefix.$gal_id.'_'.strtolower($this->cleanThumbName($thumbfilename));
+            $gallery[$key]->thumbImageFilePath = $siteUrl.'cache/jw_sigf/'.$prefix.$gal_id.'_'.strtolower($this->cleanThumbName($thumbfilename));
             $gallery[$key]->width = $thb_width;
             $gallery[$key]->height = $thb_height;
         }

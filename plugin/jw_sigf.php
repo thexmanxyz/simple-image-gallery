@@ -15,11 +15,11 @@ if (version_compare(JVERSION, '2.5.0', 'ge')) {
     jimport('joomla.html.parameter');
 }
 
-class plgContentSigf extends JPlugin
+class plgContentJw_sigf extends JPlugin
 {
 
     // Reference parameters
-    public $plg_name             = "sigf";
+    public $plg_name             = "jw_sigf";
     public $plg_tag              = "gallery";
     public $plg_version          = "4.2.0";
     public $plg_copyrights_start = "\n\n<!-- \"Simple Image Gallery Fork\" Plugin (v4.2.0) starts here -->\n";
@@ -119,11 +119,11 @@ class plgContentSigf extends JPlugin
 
         // Check for basic requirements
         if (!extension_loaded('gd') && !function_exists('gd_info')) {
-            JError::raiseNotice('', JText::_('PLG_SIGF_NOTICE_01'));
+            JError::raiseNotice('', JText::_('JW_PLG_SIGF_NOTICE_01'));
             return;
         }
         if (!is_writable($sitePath.'/cache')) {
-            JError::raiseNotice('', JText::_('PLG_SIGF_NOTICE_02'));
+            JError::raiseNotice('', JText::_('JW_PLG_SIGF_NOTICE_02'));
             return;
         }
 
@@ -165,17 +165,17 @@ class plgContentSigf extends JPlugin
         $fancybox_button_download = $pluginParams->get('fancybox_button_download', 'on');	
         $fancybox_button_zoom = $pluginParams->get('fancybox_button_zoom', 'off');	
         $fancybox_button_close = $pluginParams->get('fancybox_button_close', 'on');	
-        $fancybox_close = $pluginParams->get('fancybox_close', JText::_('PLG_SIGF_FB_CLOSE'));
-        $fancybox_next = $pluginParams->get('fancybox_next', JText::_('PLG_SIGF_FB_NEXT'));
-        $fancybox_prev = $pluginParams->get('fancybox_prev', JText::_('PLG_SIGF_FB_PREVIOUS'));
-        $fancybox_error = $pluginParams->get('fancybox_error', JText::_('PLG_SIGF_FB_REQUEST_CANNOT_BE_LOADED'));
-        $fancybox_play_start = $pluginParams->get('fancybox_play_start', JText::_('PLG_SIGF_FB_START_SLIDESHOW'));
-        $fancybox_play_stop = $pluginParams->get('fancybox_play_stop', JText::_('PLG_SIGF_FB_PAUSE_SLIDESHOW'));
-        $fancybox_full_screen = $pluginParams->get('fancybox_full_screen', JText::_('PLG_SIGF_FB_FULL_SCREEN'));
-        $fancybox_thumbs = $pluginParams->get('fancybox_thumbs', JText::_('PLG_SIGF_FB_THUMBS'));
-        $fancybox_download = $pluginParams->get('fancybox_download', JText::_('PLG_SIGF_FB_DOWNLOAD'));
-        $fancybox_share = $pluginParams->get('fancybox_share', JText::_('PLG_SIGF_FB_SHARE'));
-        $fancybox_zoom = $pluginParams->get('fancybox_zoom', JText::_('PLG_SIGF_FB_ZOOM'));
+        $fancybox_close = $pluginParams->get('fancybox_close', JText::_('JW_PLG_SIGF_FB_CLOSE'));
+        $fancybox_next = $pluginParams->get('fancybox_next', JText::_('JW_PLG_SIGF_FB_NEXT'));
+        $fancybox_prev = $pluginParams->get('fancybox_prev', JText::_('JW_PLG_SIGF_FB_PREVIOUS'));
+        $fancybox_error = $pluginParams->get('fancybox_error', JText::_('JW_PLG_SIGF_FB_REQUEST_CANNOT_BE_LOADED'));
+        $fancybox_play_start = $pluginParams->get('fancybox_play_start', JText::_('JW_PLG_SIGF_FB_START_SLIDESHOW'));
+        $fancybox_play_stop = $pluginParams->get('fancybox_play_stop', JText::_('JW_PLG_SIGF_FB_PAUSE_SLIDESHOW'));
+        $fancybox_full_screen = $pluginParams->get('fancybox_full_screen', JText::_('JW_PLG_SIGF_FB_FULL_SCREEN'));
+        $fancybox_thumbs = $pluginParams->get('fancybox_thumbs', JText::_('JW_PLG_SIGF_FB_THUMBS'));
+        $fancybox_download = $pluginParams->get('fancybox_download', JText::_('JW_PLG_SIGF_FB_DOWNLOAD'));
+        $fancybox_share = $pluginParams->get('fancybox_share', JText::_('JW_PLG_SIGF_FB_SHARE'));
+        $fancybox_zoom = $pluginParams->get('fancybox_zoom', JText::_('JW_PLG_SIGF_FB_ZOOM'));
         $fancybox_version = $pluginParams->get('fancybox_version', '3.5.7');
 
         // Advanced
@@ -247,7 +247,7 @@ class plgContentSigf extends JPlugin
                 $gallery = $SIGFHelper->renderGallery();
 
                 if (!$gallery) {
-                    JError::raiseNotice('', JText::_('PLG_SIGF_NOTICE_03').' '.$srcimgfolder);
+                    JError::raiseNotice('', JText::_('JW_PLG_SIGF_NOTICE_03').' '.$srcimgfolder);
                     continue;
                 }
 
