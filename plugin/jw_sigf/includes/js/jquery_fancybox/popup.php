@@ -22,6 +22,32 @@ $scripts = array(
     $fancyBoxPath . 'jquery.fancybox.min.js'
 );
 
+$buttons = '';
+if($fancybox_button_slideshow == 'on') {
+	$buttons .= '\'slideShow\',';
+}
+if($fancybox_button_fullscreen == 'on') {
+	$buttons .= '\'fullScreen\',';
+}
+if($fancybox_button_thumbs == 'on') {
+	$buttons .= '\'thumbs\',';
+}
+if($fancybox_button_share == 'on') {
+	$buttons .= '\'share\',';
+}
+if($fancybox_button_download == 'on') {
+	$buttons .= '\'download\',';
+}
+if($fancybox_button_zoom == 'on') {
+	$buttons .= '\'zoom\',';
+}
+if($fancybox_button_close == 'on') {
+	$buttons .= '\'close\',';
+}
+if(strlen($buttons) > 0) {
+	$buttons = rtrim($buttons, ',');
+}
+
 if(!defined('PE_FANCYBOX_LOADED')){
     define('PE_FANCYBOX_LOADED', true);
     $customLanguage = '';
@@ -59,15 +85,7 @@ if(!defined('PE_FANCYBOX_LOADED')){
                 ".$customLanguage."
                 $.fancybox.defaults.lang = '".$fancybox_language."';
                 $('a.fancybox-gallery').fancybox({
-                    buttons: [
-                        'slideShow',
-                        'fullScreen',
-                        'thumbs',
-                        'share',
-                        'download',
-                        //'zoom',
-                        'close'
-                    ],
+                    buttons: [" . $buttons . "],
                     beforeShow: function(instance, current) {
                         if (current.type === 'image') {
                             var title = current.opts.\$orig.attr('title');
