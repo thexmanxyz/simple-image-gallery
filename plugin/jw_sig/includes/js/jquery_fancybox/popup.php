@@ -12,7 +12,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 
 $extraClass = 'fancybox-gallery';
 $customLinkAttributes = 'data-fancybox="gallery'.$gal_id.'"';
-$fancyBoxPath = $fancybox_cdn ? 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@' . $fancybox_version . '/dist/' : '';
+$fancyBoxPath = ($fancybox_cdn == 'on') ? 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@' . $fancybox_version . '/dist/' : '';
 
 $stylesheets = array(
     $fancyBoxPath . 'jquery.fancybox.min.css'

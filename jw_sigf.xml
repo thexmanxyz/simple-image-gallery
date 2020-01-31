@@ -10,9 +10,15 @@
     <description>JW_PLG_SIGF_XML_DESC</description>
     <!-- Parameters -->
     <params>
-        <param name="show_copyright" type="checkbox" checked="1" label="JW_PLG_SIGF_SHOW_COPYRIGHT" description="JW_PLG_SIGF_SHOW_COPYRIGHT_DESC" value="1" />
+        <param name="show_copyright" type="list" default="on" label="JW_PLG_SIGF_SHOW_COPYRIGHT" description="JW_PLG_SIGF_SHOW_COPYRIGHT_DESC">
+            <option value="on">JW_PLG_SIGF_SHOW_COPYRIGHT_OPT_ON</option>
+            <option value="off">JW_PLG_SIGF_SHOW_COPYRIGHT_OPT_OFF</option>
+        </param>
+        <param name="mootools" type="list" default="on" label="JW_PLG_SIGF_MOOTOOLS" description="JW_PLG_SIGF_MOOTOOLS_DESC">
+            <option value="on">JW_PLG_SIGF_MOOTOOLS_OPT_ON</option>
+            <option value="off">JW_PLG_SIGF_MOOTOOLS_OPT_OFF</option>
+        </param>
         <param name="galleries_rootfolder" type="text" default="images/stories" label="JW_PLG_SIGF_ROOTFOLDER" description="JW_PLG_SIGF_ROOTFOLDER_DESC" />
-        <param name="mootools" type="checkbox" checked="1" label="JW_PLG_SIGF_MOOTOOLS" description="JW_PLG_SIGF_MOOTOOLS_DESC" value="1" />
         <param name="jQueryHandling" type="list" default="1.12.4" label="JW_PLG_SIGF_JQUERY_HANDLING" description="JW_PLG_SIGF_JQUERY_HANDLING_DESC">
             <option value="0">JW_PLG_SIGF_DO_NOT_LOAD_THE_JQUERY_LIBRARY</option>
             <option value="1.8.3">JW_PLG_SIGF_LOAD_V1_8_X_LATEST_COPY</option>
@@ -26,11 +32,20 @@
         <param name="jpg_quality" type="text" default="90" size="6" label="JW_PLG_SIGF_TQ" description="JW_PLG_SIGF_TQ_DESC" />
         <param name="cache_expire_time" type="text" default="86400" size="6" label="JW_PLG_SIGF_TCEXP" description="JW_PLG_SIGF_TCEXP_DESC" />
         <param name="memoryLimit" type="text" default="" size="6" label="JW_PLG_SIGF_ML" description="JW_PLG_SIGF_ML_DESC" />
-        <param name="fancybox_cdn" type="checkbox" checked="1" label="JW_PLG_SIGF_FB_CDN" description="JW_PLG_SIGF_FB_CDN_DESC" value="1" />
+        <param name="fancybox_cdn" type="list" default="on" label="JW_PLG_SIGF_FB_CDN" description="JW_PLG_SIGF_FB_CDN_DESC">
+            <option value="on">JW_PLG_SIGF_FB_CDN_OPN_ON</option>
+            <option value="off">JW_PLG_SIGF_FB_CDN_OPT_OFF</option>
+        </param>
         <param name="fancybox_language" type="list" default="en" label="JW_PLG_SIGF_FB_LANG" description="JW_PLG_SIGF_FB_LANG_DESC">
             <option value="en">JW_PLG_SIGF_FB_LANG_OPT_EN</option>
             <option value="de">JW_PLG_SIGF_FB_LANG_OPT_DE</option>
             <option value="xx">JW_PLG_SIGF_FB_LANG_OPT_XX</option>
+        </param>
+        <param name="fancybox_image_target" type="list" default="_blank" label="JW_PLG_SIGF_FB_IMAGE_TARGET" description="JW_PLG_SIGF_FB_IMAGE_TARGET_DESC">
+            <option value="_self">JW_PLG_SIGF_FB_IMAGE_TARGET_OPT_SELF</option>
+            <option value="_blank">JW_PLG_SIGF_FB_IMAGE_TARGET_OPT_BLANK</option>
+            <option value="_parent">JW_PLG_SIGF_FB_IMAGE_TARGET_OPT_PARENT</option>
+            <option value="_top">JW_PLG_SIGF_FB_IMAGE_TARGET_OPT_TOP</option>
         </param>
         <param name="fancybox_close" type="text" default="" hint="JW_PLG_SIGF_FB_CLOSE" label="JW_PLG_SIGF_FB_LANG_CLOSE" description="JW_PLG_SIGF_FB_LANG_CLOSE_DESC" />
         <param name="fancybox_next" type="text" default="" hint="JW_PLG_SIGF_FB_NEXT" label="JW_PLG_SIGF_FB_LANG_NEXT" description="JW_PLG_SIGF_FB_LANG_NEXT_DESC" />

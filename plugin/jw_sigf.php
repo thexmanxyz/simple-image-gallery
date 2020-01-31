@@ -143,10 +143,10 @@ class plgContentJw_sigf extends JPlugin
 
         $pluginParams = class_exists('JParameter') ? new JParameter($plugin->params) : new JRegistry($plugin->params);
 
-        $show_copyright = $pluginParams->get('show_copyright', 1);
+        $show_copyright = $pluginParams->get('show_copyright', 'on');
         $galleries_rootfolder = ($params->get('galleries_rootfolder')) ? $params->get('galleries_rootfolder') : $pluginParams->get('galleries_rootfolder', $defaultImagePath);
         $popup_engine = 'jquery_fancybox';
-        $mootools = $pluginParams->get('mootools', 1);
+        $mootools = $pluginParams->get('mootools', 'on');
         $jQueryHandling = $pluginParams->get('jQueryHandling', '1.12.4');
         $thb_template = 'Classic';
         $thb_width = (!is_null($params->get('thb_width', null))) ? $params->get('thb_width') : $pluginParams->get('thb_width', 200);
@@ -155,8 +155,9 @@ class plgContentJw_sigf extends JPlugin
         $jpg_quality = $pluginParams->get('jpg_quality', 80);
         $showcaptions = 0;
         $cache_expire_time = $pluginParams->get('cache_expire_time', 3600) * 60; // Cache expiration time in minutes
-        $fancybox_cdn = $pluginParams->get('fancybox_cdn', 1);
+        $fancybox_cdn = $pluginParams->get('fancybox_cdn', 'on');
         $fancybox_language = $pluginParams->get('fancybox_language', 'en');
+        $fancybox_image_target = $pluginParams->get('fancybox_image_target', '_self');
         $fancybox_close = $pluginParams->get('fancybox_close', JText::_('JW_PLG_SIGF_FB_CLOSE'));
         $fancybox_next = $pluginParams->get('fancybox_next', JText::_('JW_PLG_SIGF_FB_NEXT'));
         $fancybox_prev = $pluginParams->get('fancybox_prev', JText::_('JW_PLG_SIGF_FB_PREVIOUS'));
@@ -260,7 +261,7 @@ class plgContentJw_sigf extends JPlugin
                         require $popupRequire;
                     }
 
-                    if($mootools) {
+                    if($mootools == 'on') {
                         if (version_compare(JVERSION, '4', 'ge')) {
                             // Do nothing
                         } elseif (version_compare(JVERSION, '2.5.0', 'ge')) {
@@ -309,7 +310,7 @@ class plgContentJw_sigf extends JPlugin
                     }
 
                     if ($legacyHeadIncludes) {
-                        if($show_copyright) {
+                        if($show_copyright == 'on') {
                             $document->addCustomTag($this->plg_copyrights_start.$legacyHeadIncludes.$this->plg_copyrights_end);
                         } else {
                             $document->addCustomTag($legacyHeadIncludes);
@@ -342,7 +343,7 @@ class plgContentJw_sigf extends JPlugin
                 $templatePath = $templatePath->file;
                 include $templatePath;
 
-                if($show_copyright) {
+                if($show_copyright == 'on') {
                     $getTemplate = $this->plg_copyrights_start.ob_get_contents().$this->plg_copyrights_end;
                 } else {
                     $getTemplate = ob_get_contents();
