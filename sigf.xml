@@ -59,7 +59,24 @@
             <option value="on">PLG_SIGF_FB_IMAGE_PROTECT_OPT_ON</option>
             <option value="off">PLG_SIGF_FB_IMAGE_PROTECT_OPT_OFF</option>
         </param>
-		<param type="spacer" default="PLG_SIGF_SPACER_FB_ELEMENTS" />
+        <param name="fancybox_animation_effect" type="list" default="zoom" label="PLG_SIGF_FB_ANIMATION_EFFECT" description="PLG_SIGF_FB_ANIMATION_EFFECT_DESC">
+            <option value="false">PLG_SIGF_FB_ANIMATION_EFFECT_DISABLE</option>
+            <option value="zoom">PLG_SIGF_FB_ANIMATION_EFFECT_ZOOM</option>
+            <option value="fade">PLG_SIGF_FB_ANIMATION_EFFECT_FADE</option>
+            <option value="zoom-in-out">PLG_SIGF_FB_ANIMATION_EFFECT_ZOOM_IN_OUT</option>
+        </param>
+        <param name="fancybox_animation_duration" type="text" default="366" label="PLG_SIGF_FB_ANIMATION_DURATION" description="PLG_SIGF_FB_ANIMATION_DURATION_DESC" />
+        <param name="fancybox_transition_effect" type="list" default="fade" label="PLG_SIGF_FB_TRANSITION_EFFECT" description="PLG_SIGF_FB_TRANSITION_EFFECT_DESC">
+            <option value="false">PLG_SIGF_FB_TRANSITION_EFFECT_FALSE</option>
+            <option value="fade">PLG_SIGF_FB_TRANSITION_EFFECT_FADE</option>
+            <option value="slide">PLG_SIGF_FB_TRANSITION_EFFECT_SLIDE</option>
+            <option value="circular">PLG_SIGF_FB_TRANSITION_EFFECT_CIRCULAR</option>
+            <option value="tube">PLG_SIGF_FB_TRANSITION_EFFECT_TUBE</option>
+            <option value="zoom-in-out">PLG_SIGF_FB_TRANSITION_EFFECT_ZOOM_IN_OUT</option>
+            <option value="rotate">PLG_SIGF_FB_TRANSITION_EFFECT_ROTATE</option>
+        </param>
+        <param name="fancybox_transition_duration" type="text" default="366" label="PLG_SIGF_FB_TRANSITION_DURATION" description="PLG_SIGF_FB_TRANSITION_DURATION_DESC" />
+        <param type="spacer" default="PLG_SIGF_SPACER_FB_ELEMENTS" />
         <param name="fancybox_counter" type="list" default="on" label="PLG_SIGF_FB_COUNTER" description="PLG_SIGF_FB_COUNTER_DESC">
             <option value="on">PLG_SIGF_FB_COUNTER_OPT_ON</option>
             <option value="off">PLG_SIGF_FB_COUNTER_OPT_OFF</option>

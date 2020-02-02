@@ -93,6 +93,30 @@ if($fancybox_image_protect == 'on') {
     $imageProtect = ' protect: true,';
 }
 
+$imageAnimation = '';
+if($fancybox_animation_effect == 'false') {
+    $imageAnimation = ' animationEffect: false,';
+} elseif ($fancybox_animation_effect != 'zoom') {
+    $imageAnimation = ' animationEffect: \'' . $fancybox_animation_effect . '\',';
+}
+
+$imageAnimationDuration = '';
+if($fancybox_animation_duration != 366) {
+    $imageAnimationDuration = ' animationDuration: ' . $fancybox_animation_duration . ',';
+}
+
+$imageTransition = '';
+if($fancybox_transition_effect == 'false') {
+    $imageTransition = ' transitionEffect: false,';
+} elseif ($fancybox_transition_effect != 'fade') {
+    $imageTransition = ' transitionEffect: \'' . $fancybox_transition_effect . '\',';
+}
+
+$imageTransitionDuration = '';
+if($fancybox_transition_duration != 366) {
+    $imageTransitionDuration = ' transitionDuration: ' . $fancybox_transition_duration . ',';
+}
+
 if(!defined('PE_FANCYBOX_LOADED')){
     define('PE_FANCYBOX_LOADED', true);
     $customLanguage = '';
@@ -129,7 +153,7 @@ if(!defined('PE_FANCYBOX_LOADED')){
                 };
                 ".$customLanguage."
                 $.fancybox.defaults.lang = '".$fancybox_language."';
-                $('a.fancybox-gallery').fancybox({" . $loopGallery . $keyboardNavi . $arrowBtns . $infoBar . $idleTime . $imageProtect . "
+                $('a.fancybox-gallery').fancybox({" . $loopGallery . $keyboardNavi . $arrowBtns . $infoBar . $idleTime . $imageProtect . $imageAnimation . $imageAnimationDuration . $imageTransition. $imageTransitionDuration . "
                     buttons: [" . $buttons . "],
                     beforeShow: function(instance, current) {
                         if (current.type === 'image') {

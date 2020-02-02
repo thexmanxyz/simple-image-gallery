@@ -159,6 +159,10 @@ class plgContentSigf extends JPlugin
         $fancybox_version = $pluginParams->get('fancybox_version', '3.5.7');
         $fancybox_idle_time = $pluginParams->get('fancybox_idle_time', '3');
         $fancybox_image_protect = $pluginParams->get('fancybox_image_protect', 'off');
+        $fancybox_animation_effect = $pluginParams->get('fancybox_animation_effect', 'zoom');
+        $fancybox_animation_duration = $pluginParams->get('fancybox_animation_duration', 366);
+        $fancybox_transition_effect = $pluginParams->get('fancybox_transition_effect', 'fade');
+        $fancybox_transition_duration = $pluginParams->get('fancybox_transition_duration', 366);
         $fancybox_language = $pluginParams->get('fancybox_language', 'en');
         $fancybox_image_target = $pluginParams->get('fancybox_image_target', '_self');
         $fancybox_loop_gallery = $pluginParams->get('fancybox_loop_gallery', 'off');

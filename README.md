@@ -31,6 +31,8 @@ The plugin is ideal for any type of website: from personal ones (where you'd pos
 - Loop navigation supported.
 - Keyboard control setting.
 - Auto hide idle timer.
+- Support for different animation and transition effects.
+- Option for animation and transition duration.
 
 ## Migration
 Migrating from [Simple Image Gallery](https://github.com/joomlaworks/simple-image-gallery) is very simple. Either uninstall the plugin or just disable it. No necessity to change existing `{gallery}{/gallery}` tags. The existing configuration of the original plugin will not be migrated and the thumbnail cache requires to be rebuild.
