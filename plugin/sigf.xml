@@ -71,6 +71,22 @@
                     <option value="on">PLG_SIGF_FB_BUTTON_CLOSE_OPT_ON</option>
                     <option value="off">PLG_SIGF_FB_BUTTON_CLOSE_OPT_OFF</option>
                 </field>
+                <field name="fancybox_caption_image" type="list" default="on" label="PLG_SIGF_FB_CAPTION_IMAGE" description="PLG_SIGF_FB_CAPTION_IMAGE_DESC">
+                    <option value="on">PLG_SIGF_FB_CAPTION_IMAGE_OPT_ON</option>
+                    <option value="off">PLG_SIGF_FB_CAPTION_IMAGE_OPT_OFF</option>
+                </field>
+                <field name="fancybox_caption_counter" type="list" default="on" label="PLG_SIGF_FB_CAPTION_COUNTER" description="PLG_SIGF_FB_CAPTION_COUNTER_DESC">
+                    <option value="on">PLG_SIGF_FB_CAPTION_COUNTER_OPT_ON</option>
+                    <option value="off">PLG_SIGF_FB_CAPTION_COUNTER_OPT_OFF</option>
+                </field>
+                <field name="fancybox_caption_text" type="list" default="on" label="PLG_SIGF_FB_CAPTION_TEXT" description="PLG_SIGF_FB_CAPTION_TEXT_DESC">
+                    <option value="on">PLG_SIGF_FB_CAPTION_TEXT_OPT_ON</option>
+                    <option value="off">PLG_SIGF_FB_CAPTION_TEXT_OPT_OFF</option>
+                </field>
+                <field name="fancybox_caption_image_name" type="list" default="on" label="PLG_SIGF_FB_CAPTION_IMAGE_NAME" description="PLG_SIGF_FB_CAPTION_IMAGE_NAME_DESC">
+                    <option value="on">PLG_SIGF_FB_CAPTION_IMAGE_NAME_OPT_ON</option>
+                    <option value="off">PLG_SIGF_FB_CAPTION_IMAGE_NAME_OPT_OFF</option>
+                </field>
                 <field type="spacer" name="fancybox_language_spacer" label="PLG_SIGF_SPACER_FB_LABELING" />
                 <field name="fancybox_language" type="list" default="en" label="PLG_SIGF_FB_LANG" description="PLG_SIGF_FB_LANG_DESC">
                     <option value="en">PLG_SIGF_FB_LANG_OPT_DEFAULT</option>
@@ -87,6 +103,10 @@
                 <field name="fancybox_download" type="text" default="" hint="PLG_SIGF_FB_DOWNLOAD" label="PLG_SIGF_FB_LANG_DOWNLOAD" description="PLG_SIGF_FB_LANG_DOWNLOAD_DESC" />
                 <field name="fancybox_share" type="text" default="" hint="PLG_SIGF_FB_SHARE" label="PLG_SIGF_FB_LANG_SHARE" description="PLG_SIGF_FB_LANG_SHARE_DESC" />
                 <field name="fancybox_zoom" type="text" default="" hint="PLG_SIGF_FB_ZOOM" label="PLG_SIGF_FB_LANG_ZOOM" description="PLG_SIGF_FB_LANG_ZOOM_DESC" />
+                <field name="fancybox_enlarge" type="text" default="" hint="PLG_SIGF_CLICK_TO_ENLARGE_IMAGE" label="PLG_SIGF_FB_LANG_ENLARGE" description="PLG_SIGF_FB_LANG_ENLARGE_DESC" />
+                <field name="fancybox_image" type="text" default="" hint="PLG_SIGF_FB_IMAGE" label="PLG_SIGF_FB_LANG_IMAGE" description="PLG_SIGF_FB_LANG_IMAGE_DESC" />
+                <field name="fancybox_of" type="text" default="" hint="PLG_SIGF_FB_OF" label="PLG_SIGF_FB_LANG_OF" description="PLG_SIGF_FB_LANG_OF_DESC" />
+                <field name="fancybox_viewing" type="text" default="" hint="PLG_SIGF_YOU_ARE_VIEWING" label="PLG_SIGF_FB_LANG_VIEWING" description="PLG_SIGF_FB_LANG_VIEWING_DESC" />
             </fieldset>
         </fields>
     </config>

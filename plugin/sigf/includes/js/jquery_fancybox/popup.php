@@ -47,6 +47,20 @@ if($fancybox_button_close == 'on') {
 if(strlen($buttons) > 0) {
     $buttons = rtrim($buttons, ',');
 }
+$captionCounter = '';
+if($fancybox_caption_image == 'on') {
+    $captionCounter .= (" + '" . $fancybox_image . "'");
+}
+if(strlen($captionCounter) > 0) {
+    $captionCounter .= " + ' '";
+}
+if($fancybox_caption_counter == 'on') {
+    $captionCounter .= (" + (current.index + 1) + ' " . $fancybox_of . " ' + instance.group.length");
+}
+$captionSpacer = '';
+if(strlen($captionCounter) > 0 && ($fancybox_caption_text == 'on' || $fancybox_caption_image_name == 'on')) {
+    $captionSpacer .= " + ' | '";
+}
 
 if(!defined('PE_FANCYBOX_LOADED')){
     define('PE_FANCYBOX_LOADED', true);
@@ -89,7 +103,7 @@ if(!defined('PE_FANCYBOX_LOADED')){
                     beforeShow: function(instance, current) {
                         if (current.type === 'image') {
                             var title = current.opts.\$orig.attr('title');
-                            current.opts.caption = (title.length ? '<b class=\"fancyboxCounter\">".JText::_('PLG_SIGF_FB_IMAGE')." ' + (current.index + 1) + ' ".JText::_('PLG_SIGF_FB_OF')." ' + instance.group.length + '</b>' + ' | ' + title : '');
+                            current.opts.caption = (title.length ? '<b class=\"fancyboxCounter\">'" . $captionCounter . $captionSpacer . " + '</b>' + title : '');
                         }
                     }
                 });

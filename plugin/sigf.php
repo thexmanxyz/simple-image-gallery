@@ -165,6 +165,14 @@ class plgContentSigf extends JPlugin
         $fancybox_button_download = $pluginParams->get('fancybox_button_download', 'on');
         $fancybox_button_zoom = $pluginParams->get('fancybox_button_zoom', 'off');
         $fancybox_button_close = $pluginParams->get('fancybox_button_close', 'on');
+        $fancybox_caption_image = $pluginParams->get('fancybox_caption_image', 'on');
+        $fancybox_caption_counter = $pluginParams->get('fancybox_caption_counter', 'on');
+        $fancybox_caption_text = $pluginParams->get('fancybox_caption_text', 'on');
+        $fancybox_caption_image_name = $pluginParams->get('fancybox_caption_image_name', 'on');
+        $fancybox_enlarge = $pluginParams->get('fancybox_enlarge', JText::_('PLG_SIGF_CLICK_TO_ENLARGE_IMAGE'));
+        $fancybox_image = $pluginParams->get('fancybox_image', JText::_('PLG_SIGF_FB_IMAGE'));
+        $fancybox_of = $pluginParams->get('fancybox_of', JText::_('PLG_SIGF_FB_OF'));
+        $fancybox_viewing = $pluginParams->get('fancybox_viewing', JText::_('PLG_SIGF_YOU_ARE_VIEWING'));
         $fancybox_close = $pluginParams->get('fancybox_close', JText::_('PLG_SIGF_FB_CLOSE'));
         $fancybox_next = $pluginParams->get('fancybox_next', JText::_('PLG_SIGF_FB_NEXT'));
         $fancybox_prev = $pluginParams->get('fancybox_prev', JText::_('PLG_SIGF_FB_PREVIOUS'));
