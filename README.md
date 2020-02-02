@@ -22,7 +22,8 @@ The plugin is ideal for any type of website: from personal ones (where you'd pos
 - Uses fancyBox 3 for the lightbox/modal previews.
 - Configurable fancyBox version.
 - Allows printing the image gallery grid when using the print preview feature available in most Joomla components (including the default article system and K2).
-- Customizable labeling of GUI element.
+- Customizable labeling of GUI elements and caption.
+- Options to diable GUI elements.
 - German and English translation supported out of the box.
 - Disabling of MooTools supported.
 

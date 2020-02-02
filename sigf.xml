@@ -46,7 +46,7 @@
             <option value="_parent">PLG_SIGF_FB_IMAGE_TARGET_OPT_PARENT</option>
             <option value="_top">PLG_SIGF_FB_IMAGE_TARGET_OPT_TOP</option>
         </param>
-        <param type="spacer" default="PLG_SIGF_SPACER_FB_BUTTONS" />
+        <param type="spacer" default="PLG_SIGF_SPACER_FB_ELEMENTS" />
         <param name="fancybox_button_slideshow" type="list" default="on" label="PLG_SIGF_FB_BUTTON_SLIDESHOW" description="PLG_SIGF_FB_BUTTON_SLIDESHOW_DESC">
             <option value="on">PLG_SIGF_FB_BUTTON_SLIDESHOW_OPT_ON</option>
             <option value="off">PLG_SIGF_FB_BUTTON_SLIDESHOW_OPT_OFF</option>
