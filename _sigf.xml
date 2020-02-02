@@ -42,7 +42,28 @@
                     <option value="_parent">PLG_SIGF_FB_IMAGE_TARGET_OPT_PARENT</option>
                     <option value="_top">PLG_SIGF_FB_IMAGE_TARGET_OPT_TOP</option>
                 </field>
-                <field type="spacer" name="fancybox_button_spacer" label="PLG_SIGF_SPACER_FB_ELEMENTS" />
+                <field name="fancybox_loop_gallery" type="list" default="off" label="PLG_SIGF_FB_LOOP_GALLERY" description="PLG_SIGF_FB_LOOP_GALLERY_DESC">
+                    <option value="on">PLG_SIGF_FB_LOOP_GALLERY_OPT_ON</option>
+                    <option value="off">PLG_SIGF_FB_LOOP_GALLERY_OPT_OFF</option>
+                </field>
+                <field name="fancybox_keyboard_navigation" type="list" default="on" label="PLG_SIGF_FB_KEYBOARD_NAVIGATION" description="PLG_SIGF_FB_KEYBOARD_NAVIGATION_DESC">
+                    <option value="on">PLG_SIGF_FB_KEYBOARD_NAVIGATION_OPT_ON</option>
+                    <option value="off">PLG_SIGF_FB_KEYBOARD_NAVIGATION_OPT_OFF</option>
+                </field>
+                <field name="fancybox_idle_time" type="text" hint="3" default="3" label="PLG_SIGF_FB_IDLE_TIME" description="PLG_SIGF_FB_IDLE_TIME_DESC" />
+                <field name="fancybox_image_protect" type="list" default="off" label="PLG_SIGF_FB_IMAGE_PROTECT" description="PLG_SIGF_FB_IMAGE_PROTECT_DESC">
+                    <option value="on">PLG_SIGF_FB_IMAGE_PROTECT_OPT_ON</option>
+                    <option value="off">PLG_SIGF_FB_IMAGE_PROTECT_OPT_OFF</option>
+                </field>
+                <field type="spacer" name="fancybox_element_spacer" label="PLG_SIGF_SPACER_FB_ELEMENTS" />
+                <field name="fancybox_counter" type="list" default="on" label="PLG_SIGF_FB_COUNTER" description="PLG_SIGF_FB_COUNTER_DESC">
+                    <option value="on">PLG_SIGF_FB_COUNTER_OPT_ON</option>
+                    <option value="off">PLG_SIGF_FB_COUNTER_OPT_OFF</option>
+                </field>
+                <field name="fancybox_button_arrows" type="list" default="on" label="PLG_SIGF_FB_BUTTON_ARROWS" description="PLG_SIGF_FB_BUTTON_ARROWS_DESC">
+                    <option value="on">PLG_SIGF_FB_BUTTON_ARROWS_OPT_ON</option>
+                    <option value="off">PLG_SIGF_FB_BUTTON_ARROWS_OPT_OFF</option>
+                </field>
                 <field name="fancybox_button_slideshow" type="list" default="on" label="PLG_SIGF_FB_BUTTON_SLIDESHOW" description="PLG_SIGF_FB_BUTTON_SLIDESHOW_DESC">
                     <option value="on">PLG_SIGF_FB_BUTTON_SLIDESHOW_OPT_ON</option>
                     <option value="off">PLG_SIGF_FB_BUTTON_SLIDESHOW_OPT_OFF</option>

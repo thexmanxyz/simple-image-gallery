@@ -156,8 +156,15 @@ class plgContentSigf extends JPlugin
         $showcaptions = 0;
         $cache_expire_time = $pluginParams->get('cache_expire_time', 3600) * 60; // Cache expiration time in minutes
         $fancybox_cdn = $pluginParams->get('fancybox_cdn', 'on');
+        $fancybox_version = $pluginParams->get('fancybox_version', '3.5.7');
+        $fancybox_idle_time = $pluginParams->get('fancybox_idle_time', '3');
+        $fancybox_image_protect = $pluginParams->get('fancybox_image_protect', 'off');
         $fancybox_language = $pluginParams->get('fancybox_language', 'en');
         $fancybox_image_target = $pluginParams->get('fancybox_image_target', '_self');
+        $fancybox_loop_gallery = $pluginParams->get('fancybox_loop_gallery', 'off');
+        $fancybox_keyboard_navigation = $pluginParams->get('fancybox_keyboard_navigation', 'on');
+        $fancybox_counter = $pluginParams->get('fancybox_counter', 'on');
+        $fancybox_button_arrows = $pluginParams->get('fancybox_button_arrows', 'on');
         $fancybox_button_slideshow = $pluginParams->get('fancybox_button_slideshow', 'on');
         $fancybox_button_fullscreen = $pluginParams->get('fancybox_button_fullscreen', 'on');
         $fancybox_button_thumbs = $pluginParams->get('fancybox_button_thumbs', 'on');
@@ -184,7 +191,6 @@ class plgContentSigf extends JPlugin
         $fancybox_download = $pluginParams->get('fancybox_download', JText::_('PLG_SIGF_FB_DOWNLOAD'));
         $fancybox_share = $pluginParams->get('fancybox_share', JText::_('PLG_SIGF_FB_SHARE'));
         $fancybox_zoom = $pluginParams->get('fancybox_zoom', JText::_('PLG_SIGF_FB_ZOOM'));
-        $fancybox_version = $pluginParams->get('fancybox_version', '3.5.7');
 
         // Advanced
         $memoryLimit = (int)$pluginParams->get('memoryLimit');

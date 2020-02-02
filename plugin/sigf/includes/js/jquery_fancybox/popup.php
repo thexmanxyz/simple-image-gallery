@@ -47,6 +47,7 @@ if($fancybox_button_close == 'on') {
 if(strlen($buttons) > 0) {
     $buttons = rtrim($buttons, ',');
 }
+
 $captionCounter = '';
 if($fancybox_caption_image == 'on') {
     $captionCounter .= (" + '" . $fancybox_image . "'");
@@ -57,9 +58,39 @@ if(strlen($captionCounter) > 0) {
 if($fancybox_caption_counter == 'on') {
     $captionCounter .= (" + (current.index + 1) + ' " . $fancybox_of . " ' + instance.group.length");
 }
+
 $captionSpacer = '';
 if(strlen($captionCounter) > 0 && ($fancybox_caption_text == 'on' || $fancybox_caption_image_name == 'on')) {
     $captionSpacer .= " + ' | '";
+}
+
+$loopGallery = '';
+if($fancybox_loop_gallery == 'on') {
+    $loopGallery = ' loop: true,';
+}
+
+$keyboardNavi = '';
+if($fancybox_keyboard_navigation == 'off') {
+    $keyboardNavi = ' keyboard: false,';
+}
+
+$arrowBtns = '';
+if($fancybox_button_arrows == 'off') {
+    $arrowBtns = ' arrows: false,';
+}
+$infoBar = '';
+if($fancybox_counter == 'off') {
+    $infoBar = ' infobar: false,';
+}
+
+$idleTime = '';
+if($fancybox_idle_time != '3') {
+    $idleTime = ' idleTime: ' . $fancybox_idle_time . ',';
+}
+
+$imageProtect = '';
+if($fancybox_image_protect == 'on') {
+    $imageProtect = ' protect: true,';
 }
 
 if(!defined('PE_FANCYBOX_LOADED')){
@@ -98,7 +129,7 @@ if(!defined('PE_FANCYBOX_LOADED')){
                 };
                 ".$customLanguage."
                 $.fancybox.defaults.lang = '".$fancybox_language."';
-                $('a.fancybox-gallery').fancybox({
+                $('a.fancybox-gallery').fancybox({" . $loopGallery . $keyboardNavi . $arrowBtns . $infoBar . $idleTime . $imageProtect . "
                     buttons: [" . $buttons . "],
                     beforeShow: function(instance, current) {
                         if (current.type === 'image') {
