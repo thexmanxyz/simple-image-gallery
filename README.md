@@ -27,12 +27,17 @@ The plugin is ideal for any type of website: from personal ones (where you'd pos
 - Configurable fancyBox version.
 - Customizable labeling of fancyBox GUI elements and caption.
 - Options to disable fancyBox GUI elements.
+- Support for different animation and transition effects.
+- Option for animation and transition duration.
 - Simple image protection.
 - Loop navigation supported.
 - Keyboard control setting.
 - Auto hide idle timer.
-- Support for different animation and transition effects.
-- Option for animation and transition duration.
+- Auto fullscreen mode.
+- Auto slideshow and transition speed.
+- Auto thumbnail grid and behavior settings.
+- Touch settings (enable/disable, momentum, vertical touch)
+- Styling with CSS classes.
 
 ## Migration
 Migrating from [Simple Image Gallery](https://github.com/joomlaworks/simple-image-gallery) is very simple. Either uninstall the plugin or just disable it. No necessity to change existing `{gallery}{/gallery}` tags. The existing configuration of the original plugin will not be migrated and the thumbnail cache requires to be rebuild.

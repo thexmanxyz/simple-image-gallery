@@ -22,16 +22,16 @@ if($fancybox_caption_text == 'on') {
 
 <ul id="sigfId<?php echo $gal_id; ?>" class="sigfContainer sigfClassic<?php echo $extraWrapperClass; ?>">
     <?php foreach($gallery as $count=>$photo):
-	$captionHelp = $captionText;
-	if($fancybox_caption_image_name == 'on') {
-		if(strlen($captionText) > 0) {
-			$captionHelp .= ' ';
-		}
-		$captionHelp .= $photo->filename;
-	}
-	if(strlen($captionHelp) == 0) {
-		$captionHelp = ' ';
-	}?>
+    $captionHelp = $captionText;
+    if($fancybox_caption_image_name == 'on') {
+        if(strlen($captionText) > 0) {
+            $captionHelp .= ' ';
+        }
+        $captionHelp .= $photo->filename;
+    }
+    if(strlen($captionHelp) == 0) {
+        $captionHelp = ' ';
+    }?>
     <li class="sigfThumb">
         <a href="<?php echo $photo->sourceImageFilePath; ?>" class="sigfLink<?php echo $extraClass; ?>" style="width:<?php echo $photo->width; ?>px;height:<?php echo $photo->height; ?>px;" title="<?php echo $captionHelp; ?>" data-thumb="<?php echo $photo->thumbImageFilePath; ?>"<?php echo $targetAttr; ?><?php echo $customLinkAttributes; ?>>
             <img class="sigfImg" src="<?php echo $transparent; ?>" alt="<?php echo $fancybox_enlarge.' '.$photo->filename; ?>" title="<?php echo $fancybox_enlarge.' '.$photo->filename; ?>" style="width:<?php echo $photo->width; ?>px;height:<?php echo $photo->height; ?>px;background-image:url('<?php echo $photo->thumbImageFilePath; ?>');" />

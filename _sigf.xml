@@ -42,6 +42,16 @@
                     <option value="_parent">PLG_SIGF_FB_IMAGE_TARGET_OPT_PARENT</option>
                     <option value="_top">PLG_SIGF_FB_IMAGE_TARGET_OPT_TOP</option>
                 </field>
+                <field name="fancybox_idle_time" type="text" hint="3" default="3" label="PLG_SIGF_FB_IDLE_TIME" description="PLG_SIGF_FB_IDLE_TIME_DESC" />
+                <field name="fancybox_image_protect" type="list" default="off" label="PLG_SIGF_FB_IMAGE_PROTECT" description="PLG_SIGF_FB_IMAGE_PROTECT_DESC">
+                    <option value="on">PLG_SIGF_FB_IMAGE_PROTECT_OPT_ON</option>
+                    <option value="off">PLG_SIGF_FB_IMAGE_PROTECT_OPT_OFF</option>
+                </field>
+                <field name="fancybox_auto_fullscreen" type="list" default="off" label="PLG_SIGF_FB_AUTO_FULLSCREEN" description="PLG_SIGF_FB_AUTO_FULLSCREEN_DESC">
+                    <option value="on">PLG_SIGF_FB_AUTO_FULLSCREEN_OPT_ON</option>
+                    <option value="off">PLG_SIGF_FB_AUTO_FULLSCREEN_OPT_OFF</option>
+                </field>
+                <field type="spacer" name="fancybox_navigation" label="PLG_SIGF_SPACER_FB_NAVIGATION" />
                 <field name="fancybox_loop_gallery" type="list" default="off" label="PLG_SIGF_FB_LOOP_GALLERY" description="PLG_SIGF_FB_LOOP_GALLERY_DESC">
                     <option value="on">PLG_SIGF_FB_LOOP_GALLERY_OPT_ON</option>
                     <option value="off">PLG_SIGF_FB_LOOP_GALLERY_OPT_OFF</option>
@@ -50,11 +60,12 @@
                     <option value="on">PLG_SIGF_FB_KEYBOARD_NAVIGATION_OPT_ON</option>
                     <option value="off">PLG_SIGF_FB_KEYBOARD_NAVIGATION_OPT_OFF</option>
                 </field>
-                <field name="fancybox_idle_time" type="text" hint="3" default="3" label="PLG_SIGF_FB_IDLE_TIME" description="PLG_SIGF_FB_IDLE_TIME_DESC" />
-                <field name="fancybox_image_protect" type="list" default="off" label="PLG_SIGF_FB_IMAGE_PROTECT" description="PLG_SIGF_FB_IMAGE_PROTECT_DESC">
-                    <option value="on">PLG_SIGF_FB_IMAGE_PROTECT_OPT_ON</option>
-                    <option value="off">PLG_SIGF_FB_IMAGE_PROTECT_OPT_OFF</option>
+                <field name="fancybox_auto_slideshow" type="list" default="off" label="PLG_SIGF_FB_AUTO_SLIDESHOW" description="PLG_SIGF_FB_AUTO_SLIDESHOW_DESC">
+                    <option value="on">PLG_SIGF_FB_AUTO_SLIDESHOW_OPT_ON</option>
+                    <option value="off">PLG_SIGF_FB_AUTO_SLIDESHOW_OFF</option>
                 </field>
+                <field name="fancybox_slideshow_speed" type="text" hint="3000" default="3000" label="PLG_SIGF_FB_SLIDESHOW_SPEED" description="PLG_SIGF_FB_SLIDESHOW_SPEED_DESC" />
+                <field type="spacer" name="fancybox_animation_spacer" label="PLG_SIGF_SPACER_FB_ANIMATION" />
                 <field name="fancybox_animation_effect" type="list" default="zoom" label="PLG_SIGF_FB_ANIMATION_EFFECT" description="PLG_SIGF_FB_ANIMATION_EFFECT_DESC">
                     <option value="false">PLG_SIGF_FB_ANIMATION_EFFECT_DISABLE</option>
                     <option value="zoom">PLG_SIGF_FB_ANIMATION_EFFECT_ZOOM</option>
@@ -72,6 +83,35 @@
                     <option value="rotate">PLG_SIGF_FB_TRANSITION_EFFECT_ROTATE</option>
                 </field>
                 <field name="fancybox_transition_duration" type="text" hint="366" default="366" label="PLG_SIGF_FB_TRANSITION_DURATION" description="PLG_SIGF_FB_TRANSITION_DURATION_DESC" />
+                <field type="spacer" name="fancybox_thumbnails" label="PLG_SIGF_SPACER_FB_THUMBNAILS" />
+                <field name="fancybox_thumbnail_autostart" type="list" default="off" label="PLG_SIGF_FB_THUMBNAIL_AUTO" description="PLG_SIGF_FB_THUMBNAIL_AUTO_DESC">
+                    <option value="on">PLG_SIGF_FB_THUMBNAIL_AUTO_OPT_ON</option>
+                    <option value="off">PLG_SIGF_FB_THUMBNAIL_AUTO_OPT_OFF</option>
+                </field>
+                <field name="fancybox_thumbnail_hide_close" type="list" default="on" label="PLG_SIGF_FB_THUMBNAIL_HIDE_CLOSE" description="PLG_SIGF_FB_THUMBNAIL_HIDE_CLOSE_DESC">
+                    <option value="on">PLG_SIGF_FB_THUMBNAIL_HIDE_CLOSE_OPT_ON</option>
+                    <option value="off">PLG_SIGF_FB_THUMBNAIL_HIDE_CLOSE_OPT_OFF</option>
+                </field>
+                <field name="fancybox_thumbnail_axis" type="list" default="y" label="PLG_SIGF_FB_THUMBNAIL_AXIS" description="PLG_SIGF_FB_THUMBNAIL_AXIS_DESC">
+                    <option value="x">PLG_SIGF_FB_THUMBNAIL_AXIS_OPT_X</option>
+                    <option value="y">PLG_SIGF_FB_THUMBNAIL_AXIS_OPT_Y</option>
+                </field>
+                <field type="spacer" name="fancybox_mobile" label="PLG_SIGF_SPACER_FB_MOBILE" />
+                <field name="fancybox_touch" type="list" default="on" label="PLG_SIGF_FB_TOUCH" description="PLG_SIGF_FB_TOUCH_DESC">
+                    <option value="on">PLG_SIGF_FB_TOUCH_OPT_ON</option>
+                    <option value="off">PLG_SIGF_FB_TOUCH_OPT_OFF</option>
+                </field>
+                <field name="fancybox_touch_vertical" type="list" default="on" label="PLG_SIGF_FB_TOUCH_VERTICAL" description="PLG_SIGF_FB_TOUCH_VERTICAL_DESC">
+                    <option value="on">PLG_SIGF_FB_TOUCH_VERTICAL_OPT_ON</option>
+                    <option value="off">PLG_SIGF_FB_TOUCH_VERTICAL_OPT_OFF</option>
+                </field>
+                <field name="fancybox_touch_momentum" type="list" default="on" label="PLG_SIGF_FB_TOUCH_MOMENTUM" description="PLG_SIGF_FB_TOUCH_MOMENTUM_DESC">
+                    <option value="on">PLG_SIGF_FB_TOUCH_MOMENTUM_OPT_ON</option>
+                    <option value="off">PLG_SIGF_FB_TOUCH_MOMENTUM_OPT_OFF</option>
+                </field>
+                <field type="spacer" name="fancybox_styling_spacer" label="PLG_SIGF_SPACER_FB_STYLING" />
+                <field name="fancybox_base_class" type="text" default="" label="PLG_SIGF_FB_BASE_CLASS" description="PLG_SIGF_FB_BASE_CLASS_DESC" />
+                <field name="fancybox_slide_class" type="text" default="" label="PLG_SIGF_FB_SLIDE_CLASS" description="PLG_SIGF_FB_SLIDE_CLASS_DESC" />
                 <field type="spacer" name="fancybox_element_spacer" label="PLG_SIGF_SPACER_FB_ELEMENTS" />
                 <field name="fancybox_counter" type="list" default="on" label="PLG_SIGF_FB_COUNTER" description="PLG_SIGF_FB_COUNTER_DESC">
                     <option value="on">PLG_SIGF_FB_COUNTER_OPT_ON</option>
