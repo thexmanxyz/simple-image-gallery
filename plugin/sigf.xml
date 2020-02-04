@@ -96,6 +96,55 @@
                     <option value="x">PLG_SIGF_FB_THUMBNAIL_AXIS_OPT_X</option>
                     <option value="y">PLG_SIGF_FB_THUMBNAIL_AXIS_OPT_Y</option>
                 </field>
+                <field type="spacer" name="fancybox_behavior" label="PLG_SIGF_SPACER_FB_BEHAVIOR" />
+                <field name="fancybox_click_content" type="list" default="zoom" label="PLG_SIGF_FB_CLICK_CONTENT" description="PLG_SIGF_FB_CLICK_CONTENT_DESC">
+                    <option value="false">PLG_SIGF_FB_CLICK_CONTENT_OPT_NOTHING</option>
+                    <option value="close">PLG_SIGF_FB_CLICK_CONTENT_OPT_CLOSE</option>
+                    <option value="next">PLG_SIGF_FB_CLICK_CONTENT_OPT_NEXT</option>
+                    <option value="nextOrClose">PLG_SIGF_FB_CLICK_CONTENT_OPT_NEXT_OR_CLOSE</option>
+                    <option value="toggleControls">PLG_SIGF_FB_CLICK_CONTENT_OPT_TOGGLE_CONTROLS</option>
+                    <option value="zoom">PLG_SIGF_FB_CLICK_CONTENT_OPT_ZOOM</option>
+                </field>
+                <field name="fancybox_click_slide" type="list" default="close" label="PLG_SIGF_FB_CLICK_SLIDE" description="PLG_SIGF_FB_CLICK_SLIDE_DESC">
+                    <option value="false">PLG_SIGF_FB_CLICK_SLIDE_OPT_NOTHING</option>
+                    <option value="close">PLG_SIGF_FB_CLICK_SLIDE_OPT_CLOSE</option>
+                    <option value="next">PLG_SIGF_FB_CLICK_SLIDE_OPT_NEXT</option>
+                    <option value="nextOrClose">PLG_SIGF_FB_CLICK_SLIDE_OPT_NEXT_OR_CLOSE</option>
+                    <option value="toggleControls">PLG_SIGF_FB_CLICK_SLIDE_OPT_TOGGLE_CONTROLS</option>
+                    <option value="zoom">PLG_SIGF_FB_CLICK_SLIDE_OPT_ZOOM</option>
+                </field>
+                <field name="fancybox_click_outside" type="list" default="close" label="PLG_SIGF_FB_CLICK_OUTSIDE" description="PLG_SIGF_FB_CLICK_OUTSIDE_DESC">
+                    <option value="false">PLG_SIGF_FB_CLICK_OUTSIDE_OPT_NOTHING</option>
+                    <option value="close">PLG_SIGF_FB_CLICK_OUTSIDE_OPT_CLOSE</option>
+                    <option value="next">PLG_SIGF_FB_CLICK_OUTSIDE_OPT_NEXT</option>
+                    <option value="nextOrClose">PLG_SIGF_FB_CLICK_OUTSIDE_OPT_NEXT_OR_CLOSE</option>
+                    <option value="toggleControls">PLG_SIGF_FB_CLICK_OUTSIDE_OPT_TOGGLE_CONTROLS</option>
+                    <option value="zoom">PLG_SIGF_FB_CLICK_OUTSIDE_OPT_ZOOM</option>
+                </field>
+                <field name="fancybox_dblclick_content" type="list" default="false" label="PLG_SIGF_FB_DBLCLICK_CONTENT" description="PLG_SIGF_FB_DBLCLICK_CONTENT_DESC">
+                    <option value="false">PLG_SIGF_FB_DBLCLICK_CONTENT_OPT_NOTHING</option>
+                    <option value="close">PLG_SIGF_FB_DBLCLICK_CONTENT_OPT_CLOSE</option>
+                    <option value="next">PLG_SIGF_FB_DBLCLICK_CONTENT_OPT_NEXT</option>
+                    <option value="nextOrClose">PLG_SIGF_FB_DBLCLICK_CONTENT_OPT_NEXT_OR_CLOSE</option>
+                    <option value="toggleControls">PLG_SIGF_FB_DBLCLICK_CONTENT_OPT_TOGGLE_CONTROLS</option>
+                    <option value="zoom">PLG_SIGF_FB_DBLCLICK_CONTENT_OPT_ZOOM</option>
+                </field>
+                <field name="fancybox_dblclick_slide" type="list" default="false" label="PLG_SIGF_FB_DBLCLICK_SLIDE" description="PLG_SIGF_FB_DBLCLICK_SLIDE_DESC">
+                    <option value="false">PLG_SIGF_FB_DBLCLICK_SLIDE_OPT_NOTHING</option>
+                    <option value="close">PLG_SIGF_FB_DBLCLICK_SLIDE_OPT_CLOSE</option>
+                    <option value="next">PLG_SIGF_FB_DBLCLICK_SLIDE_OPT_NEXT</option>
+                    <option value="nextOrClose">PLG_SIGF_FB_DBLCLICK_SLIDE_OPT_NEXT_OR_CLOSE</option>
+                    <option value="toggleControls">PLG_SIGF_FB_DBLCLICK_SLIDE_OPT_TOGGLE_CONTROLS</option>
+                    <option value="zoom">PLG_SIGF_FB_DBLCLICK_SLIDE_OPT_ZOOM</option>
+                </field>
+                <field name="fancybox_dblclick_outside" type="list" default="false" label="PLG_SIGF_FB_DBLCLICK_OUTSIDE" description="PLG_SIGF_FB_DBLCLICK_OUTSIDE_DESC">
+                    <option value="false">PLG_SIGF_FB_DBLCLICK_OUTSIDE_OPT_NOTHING</option>
+                    <option value="close">PLG_SIGF_FB_DBLCLICK_OUTSIDE_OPT_CLOSE</option>
+                    <option value="next">PLG_SIGF_FB_DBLCLICK_OUTSIDE_OPT_NEXT</option>
+                    <option value="nextOrClose">PLG_SIGF_FB_DBLCLICK_OUTSIDE_OPT_NEXT_OR_CLOSE</option>
+                    <option value="toggleControls">PLG_SIGF_FB_DBLCLICK_OUTSIDE_OPT_TOGGLE_CONTROLS</option>
+                    <option value="zoom">PLG_SIGF_FB_DBLCLICK_OUTSIDE_OPT_ZOOM</option>
+                </field>
                 <field type="spacer" name="fancybox_mobile" label="PLG_SIGF_SPACER_FB_MOBILE" />
                 <field name="fancybox_touch" type="list" default="on" label="PLG_SIGF_FB_TOUCH" description="PLG_SIGF_FB_TOUCH_DESC">
                     <option value="on">PLG_SIGF_FB_TOUCH_OPT_ON</option>
@@ -166,9 +215,9 @@
                     <option value="off">PLG_SIGF_FB_CAPTION_IMAGE_NAME_OPT_OFF</option>
                 </field>
                 <field type="spacer" name="fancybox_language_spacer" label="PLG_SIGF_SPACER_FB_LABELING" />
-                <field name="fancybox_language" type="list" default="en" label="PLG_SIGF_FB_LANG" description="PLG_SIGF_FB_LANG_DESC">
-                    <option value="en">PLG_SIGF_FB_LANG_OPT_DEFAULT</option>
-                    <option value="xx">PLG_SIGF_FB_LANG_OPT_XX</option>
+                <field name="fancybox_language" type="list" default="default" label="PLG_SIGF_FB_LANG" description="PLG_SIGF_FB_LANG_DESC">
+                    <option value="default">PLG_SIGF_FB_LANG_OPT_DEFAULT</option>
+                    <option value="customize">PLG_SIGF_FB_LANG_OPT_XX</option>
                 </field>
                 <field name="fancybox_close" type="text" default="" hint="PLG_SIGF_FB_CLOSE" label="PLG_SIGF_FB_LANG_CLOSE" description="PLG_SIGF_FB_LANG_CLOSE_DESC" />
                 <field name="fancybox_next" type="text" default="" hint="PLG_SIGF_FB_NEXT" label="PLG_SIGF_FB_LANG_NEXT" description="PLG_SIGF_FB_LANG_NEXT_DESC" />

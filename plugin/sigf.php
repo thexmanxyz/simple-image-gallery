@@ -163,7 +163,7 @@ class plgContentSigf extends JPlugin
         $fancybox_animation_duration = $pluginParams->get('fancybox_animation_duration', 366);
         $fancybox_transition_effect = $pluginParams->get('fancybox_transition_effect', 'fade');
         $fancybox_transition_duration = $pluginParams->get('fancybox_transition_duration', 366);
-        $fancybox_language = $pluginParams->get('fancybox_language', 'en');
+        $fancybox_language = $pluginParams->get('fancybox_language', 'default');
         $fancybox_image_target = $pluginParams->get('fancybox_image_target', '_self');
         $fancybox_loop_gallery = $pluginParams->get('fancybox_loop_gallery', 'off');
         $fancybox_keyboard_navigation = $pluginParams->get('fancybox_keyboard_navigation', 'on');
@@ -172,6 +172,12 @@ class plgContentSigf extends JPlugin
         $fancybox_thumbnail_autostart = $pluginParams->get('fancybox_thumbnail_autostart', 'off');
         $fancybox_thumbnail_hide_close = $pluginParams->get('fancybox_thumbnail_hide_close', 'on');
         $fancybox_thumbnail_axis = $pluginParams->get('fancybox_thumbnail_axis', 'y');
+        $fancybox_click_content = $pluginParams->get('fancybox_click_content', 'zoom');
+        $fancybox_click_slide = $pluginParams->get('fancybox_click_slide', 'close');
+        $fancybox_click_outside = $pluginParams->get('fancybox_click_outside', 'close');
+        $fancybox_dblclick_content = $pluginParams->get('fancybox_dblclick_content', 'false');
+        $fancybox_dblclick_slide = $pluginParams->get('fancybox_dblclick_slide', 'false');
+        $fancybox_dblclick_outside = $pluginParams->get('fancybox_dblclick_outside', 'false');
         $fancybox_counter = $pluginParams->get('fancybox_counter', 'on');
         $fancybox_auto_fullscreen = $pluginParams->get('fancybox_auto_fullscreen', 'off');
         $fancybox_touch = $pluginParams->get('fancybox_touch', 'on');

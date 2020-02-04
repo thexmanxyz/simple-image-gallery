@@ -25,6 +25,9 @@ $scripts = array(
 if(!defined('PE_FANCYBOX_LOADED')){
     define('PE_FANCYBOX_LOADED', true);
 
+    $currentLanguage = JFactory::getLanguage();
+    $langTag = substr($currentLanguage->getTag(), 0, 2);
+
     $buttons = '';
     if($fancybox_button_slideshow == 'on') {
         $buttons .= '\'slideShow\',';
@@ -161,7 +164,7 @@ if(!defined('PE_FANCYBOX_LOADED')){
     
     $slideShow = '';
     if($fancybox_auto_slideshow == 'on' || $fancybox_slideshow_speed != 3000) {
-        $slideshow .= 'autoStart: ';
+        $slideShow .= 'autoStart: ';
         if($fancybox_auto_slideshow == 'on') {
             $slideShow .= 'true';
         } else {
@@ -191,14 +194,68 @@ if(!defined('PE_FANCYBOX_LOADED')){
         $thumbnails .= ', axis: "' . $fancybox_thumbnail_axis . '"},';
     }
 
+    $clickContent = '';
+    if($fancybox_click_content != 'zoom') {
+        $clickContent = ' clickContent: function(current, event) { return current.type === "image" ? ';
+        if($fancybox_click_content == 'false') {
+            $clickContent .= $fancybox_click_content;
+        } else {
+            $clickContent .= ('"' . $fancybox_click_content . '"');
+        }
+        $clickContent .= ' : false; },';
+    }
+
+    $clickSlide = '';
+    if($fancybox_click_slide != 'close') {
+        $clickSlide = ' clickSlide: ';
+        if($fancybox_click_slide == 'false') {
+            $clickSlide .= $fancybox_click_slide;
+        } else {
+            $clickSlide .= ('"' . $fancybox_click_slide . '"');
+        }
+        $clickSlide .= ',';
+    }
+
+    $clickOutside = '';
+    if($fancybox_click_outside != 'close') {
+        $clickOutside = ' clickOutside: ';
+        if($fancybox_click_outside == 'false') {
+            $clickOutside .= $fancybox_click_outside;
+        } else {
+            $clickOutside .= ('"' . $fancybox_click_outside . '"');
+        }
+        $clickOutside .= ',';
+    }
+
+    $dblClickContent = '';
+    if($fancybox_dblclick_content != 'false') {
+        $dblClickContent = ' dblclickContent: ';
+        $dblClickContent .= ('"' . $fancybox_dblclick_content . '"');
+        $dblClickContent .= ',';
+    }
+
+    $dblClickSlide = '';
+    if($fancybox_dblclick_slide != 'false') {
+        $dblClickSlide = ' dblclickSlide: ';
+        $dblClickSlide .= ('"' . $fancybox_dblclick_slide . '"');
+        $dblClickSlide .= ',';
+    }
+
+    $dblClickOutside = '';
+    if($fancybox_dblclick_outside != 'false') {
+        $dblClickOutside = ' dblclickOutside: ';
+        $dblClickOutside .= ('"' . $fancybox_dblclick_outside . '"');
+        $dblClickOutside .= ',';
+    }
+
     $fancyBoxConfig = $loopGallery . $keyboardNavi . $arrowBtns . $infoBar . $idleTime . 
                         $imageProtect . $imageAnimation . $imageAnimationDuration . $imageTransition . 
                         $imageTransitionDuration . $baseClasses . $slideClasses . $autoFullscreen .
-                        $touchMobile . $slideShow . $thumbnails;
+                        $touchMobile . $slideShow . $thumbnails . $clickContent . $clickSlide .
+                        $clickOutside . $dblClickContent . $dblClickSlide . $dblClickOutside;
 
-    $customLanguage = '';
-    if($fancybox_language == 'xx') {
-        $customLanguage = "$.fancybox.defaults.i18n.xx = {
+    $buttonLabeling = '';
+    $buttonLabeling = "$.fancybox.defaults.i18n." . $langTag . " = {
                     CLOSE: '".$fancybox_close."',
                     NEXT: '".$fancybox_next."',
                     PREV: '".$fancybox_prev."',
@@ -211,25 +268,11 @@ if(!defined('PE_FANCYBOX_LOADED')){
                     SHARE: '".$fancybox_share."',
                     ZOOM: '".$fancybox_zoom."'
                 };";
-    }
     $scriptDeclarations = array("
         (function($) {
             $(document).ready(function() {
-                $.fancybox.defaults.i18n.en = {
-                    CLOSE: '".JText::_('PLG_SIGF_FB_CLOSE')."',
-                    NEXT: '".JText::_('PLG_SIGF_FB_NEXT')."',
-                    PREV: '".JText::_('PLG_SIGF_FB_PREVIOUS')."',
-                    ERROR: '".JText::_('PLG_SIGF_FB_REQUEST_CANNOT_BE_LOADED')."',
-                    PLAY_START: '".JText::_('PLG_SIGF_FB_START_SLIDESHOW')."',
-                    PLAY_STOP: '".JText::_('PLG_SIGF_FB_PAUSE_SLIDESHOW')."',
-                    FULL_SCREEN: '".JText::_('PLG_SIGF_FB_FULL_SCREEN')."',
-                    THUMBS: '".JText::_('PLG_SIGF_FB_THUMBS')."',
-                    DOWNLOAD: '".JText::_('PLG_SIGF_FB_DOWNLOAD')."',
-                    SHARE: '".JText::_('PLG_SIGF_FB_SHARE')."',
-                    ZOOM: '".JText::_('PLG_SIGF_FB_ZOOM')."'
-                };
-                ".$customLanguage."
-                $.fancybox.defaults.lang = '".$fancybox_language."';
+                ".$buttonLabeling."
+                $.fancybox.defaults.lang = '" . $langTag . "';
                 $('a.fancybox-gallery').fancybox({" . $fancyBoxConfig . "
                     buttons: [" . $buttons . "],
                     beforeShow: function(instance, current) {
