@@ -66,7 +66,9 @@ if(!defined('PE_FANCYBOX_LOADED')){
     }
 
     $captionSpacer = '';
-    if(strlen($captionCounter) > 0 && ($fancybox_caption_text == 'on' || $fancybox_caption_image_name == 'on')) {
+    if(strlen($captionCounter) > 0 && 
+        ($fancybox_caption_text == 'on' || $fancybox_caption_image_name == 'on')) {
+
         $captionSpacer .= " + ' | '";
     }
 
@@ -138,60 +140,68 @@ if(!defined('PE_FANCYBOX_LOADED')){
     if($fancybox_auto_fullscreen == 'on') {
         $autoFullscreen = ' fullScreen: { autoStart: true },';
     }
-    
+
     $touchMobile = '';
     if($fancybox_touch == 'on' ) {
-        if($fancybox_touch_vertical == 'off' || $fancybox_touch_momentum == 'off') {
-            $touchMobile .= 'vertical: ';
+        if($fancybox_touch_vertical == 'off' ||
+            $fancybox_touch_momentum == 'off') {
+
             if($fancybox_touch_vertical == 'off') {
-                $touchMobile .= 'false';
-            } else {
-                $touchMobile .= 'true';
+                $touchMobile .= 'vertical: false';
             }
 
-            $touchMobile .= ', momentum: ';
             if($fancybox_touch_momentum == 'off') {
-                $touchMobile .= 'false';
-            } else {
-                $touchMobile .= 'true';
+                if($touchMobile != '') {
+                    $touchMobile .= ', ';
+                }
+                $touchMobile .= 'momentum: false';
             }
-    
             $touchMobile = (' touch: {' . $touchMobile . '},');
         }
     } else {
         $touchMobile .= ' touch: false,';
     }
-    
+
     $slideShow = '';
-    if($fancybox_auto_slideshow == 'on' || $fancybox_slideshow_speed != 3000) {
-        $slideShow .= 'autoStart: ';
+    if($fancybox_auto_slideshow == 'on' ||
+        $fancybox_slideshow_speed != 3000) {
+
         if($fancybox_auto_slideshow == 'on') {
-            $slideShow .= 'true';
-        } else {
-            $slideShow .= 'false';
+            $slideShow .= 'autoStart: true';
         }
 
-        $slideShow .= ', speed: ' . $fancybox_slideshow_speed;
-        $slideShow = ' slideShow: {' . $slideShow . '),';
+        if($fancybox_slideshow_speed != 3000) {
+            if($slideShow != '') {
+                $slideShow .= ', ';
+            }
+            $slideShow .= 'speed: ' . $fancybox_slideshow_speed;
+        }
+        $slideShow = ' slideShow: {' . $slideShow . '},';
     }
-    
+
     $thumbnails = '';
-    if($fancybox_thumbnail_autostart == 'on' || $fancybox_thumbnail_hide_close == 'off' || $fancybox_thumbnail_axis == 'x') {
-        $thumbnails .= ' thumbs: {autoStart: ';
+    if($fancybox_thumbnail_autostart == 'on' || 
+        $fancybox_thumbnail_hide_close == 'off' || 
+        $fancybox_thumbnail_axis == 'x') {
+
         if($fancybox_thumbnail_autostart == 'on') {
-            $thumbnails .= 'true';
-        } else {
-            $thumbnails .= 'false';
+            $thumbnails .= 'autoStart: true';
         }
 
-        $thumbnails .= ', hideOnClose: ';
-        if($fancybox_thumbnail_hide_close == 'on') {
-            $thumbnails .= 'true';
-        } else {
-            $thumbnails .= 'false';
+        if($fancybox_thumbnail_hide_close == 'off') {
+            if($thumbnails != '') {
+                $thumbnails .= ', ';
+            }
+            $thumbnails .= 'hideOnClose: false';
         }
 
-        $thumbnails .= ', axis: "' . $fancybox_thumbnail_axis . '"},';
+        if($fancybox_thumbnail_axis == 'x') {
+            if($thumbnails != '') {
+                $thumbnails .= ', ';
+            }
+            $thumbnails .= 'axis: "x"';
+        }
+        $thumbnails = ' thumbs: {' . $thumbnails . '},';
     }
 
     $clickContent = '';
@@ -248,11 +258,52 @@ if(!defined('PE_FANCYBOX_LOADED')){
         $dblClickOutside .= ',';
     }
 
+    $mobile = '';
+    if($fancybox_mobile_idle_time == 'on' || 
+        $fancybox_mobile_click_content != 'toggleControls' || 
+        $fancybox_mobile_click_slide != 'toggleControls' || 
+        $fancybox_mobile_dblclick_content != 'zoom' || 
+        $fancybox_mobile_dblclick_slide != 'zoom') {
+  
+        if($fancybox_mobile_idle_time == 'on') {
+            $mobile .= 'idleTime: true';
+        }
+
+        if($fancybox_mobile_click_content != 'toggleControls') {
+            if($mobile != '') {
+                $mobile .= ', ';
+            }
+            $mobile .= ('clickContent: function(current, event) { return current.type === "image" ? "' . $fancybox_mobile_click_content . '" : false; }');
+        }
+
+        if($fancybox_mobile_click_slide != 'toggleControls') {
+            if($mobile != '') {
+                $mobile .= ', ';
+            }
+             $mobile .= ('clickSlide: function(current, event) { return current.type === "image" ? "' . $fancybox_mobile_click_slide . '" : "close"; }');
+        }
+
+        if($fancybox_mobile_dblclick_content != 'zoom') {
+            if($mobile != '') {
+                $mobile .= ', ';
+            }
+            $mobile .= ('dblclickContent: function(current, event) { return current.type === "image" ? "' . $fancybox_mobile_dblclick_content . '" : false; }');
+        }
+
+        if($fancybox_mobile_dblclick_slide != 'zoom') {
+            if($mobile != '') {
+                $mobile .= ', ';
+            }
+            $mobile .= ('dblclickSlide: function(current, event) { return current.type === "image" ? "' . $fancybox_mobile_dblclick_slide . '" : false; }');
+        }
+        $mobile = ' mobile: {' . $mobile . '},';
+    }
+
     $fancyBoxConfig = $loopGallery . $keyboardNavi . $arrowBtns . $infoBar . $idleTime . 
                         $imageProtect . $imageAnimation . $imageAnimationDuration . $imageTransition . 
                         $imageTransitionDuration . $baseClasses . $slideClasses . $autoFullscreen .
                         $touchMobile . $slideShow . $thumbnails . $clickContent . $clickSlide .
-                        $clickOutside . $dblClickContent . $dblClickSlide . $dblClickOutside;
+                        $clickOutside . $dblClickContent . $dblClickSlide . $dblClickOutside . $mobile;
 
     $buttonLabeling = '';
     $buttonLabeling = "$.fancybox.defaults.i18n." . $langTag . " = {
@@ -271,7 +322,7 @@ if(!defined('PE_FANCYBOX_LOADED')){
     $scriptDeclarations = array("
         (function($) {
             $(document).ready(function() {
-                ".$buttonLabeling."
+                " . $buttonLabeling . "
                 $.fancybox.defaults.lang = '" . $langTag . "';
                 $('a.fancybox-gallery').fancybox({" . $fancyBoxConfig . "
                     buttons: [" . $buttons . "],

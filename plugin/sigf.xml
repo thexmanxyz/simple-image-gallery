@@ -158,6 +158,42 @@
                     <option value="on">PLG_SIGF_FB_TOUCH_MOMENTUM_OPT_ON</option>
                     <option value="off">PLG_SIGF_FB_TOUCH_MOMENTUM_OPT_OFF</option>
                 </field>
+                <field name="fancybox_mobile_idle_time" type="list" default="off" label="PLG_SIGF_FB_MOBILE_IDLE_TIME" description="PLG_SIGF_FB_MOBILE_IDLE_TIME_DESC">
+                    <option value="on">PLG_SIGF_FB_MOBILE_IDLE_TIME_OPT_ON</option>
+                    <option value="off">PLG_SIGF_FB_MOBILE_IDLE_TIME_OPT_OFF</option>
+                </field>
+                <field name="fancybox_mobile_click_content" type="list" default="toggleControls" label="PLG_SIGF_FB_MOBILE_CLICK_CONTENT" description="PLG_SIGF_FB_MOBILE_CLICK_CONTENT_DESC">
+                    <option value="false">PLG_SIGF_FB_MOBILE_CLICK_CONTENT_OPT_NOTHING</option>
+                    <option value="close">PLG_SIGF_FB_MOBILE_CLICK_CONTENT_OPT_CLOSE</option>
+                    <option value="next">PLG_SIGF_FB_MOBILE_CLICK_CONTENT_OPT_NEXT</option>
+                    <option value="nextOrClose">PLG_SIGF_FB_MOBILE_CLICK_CONTENT_OPT_NEXT_OR_CLOSE</option>
+                    <option value="toggleControls">PLG_SIGF_FB_MOBILE_CLICK_CONTENT_OPT_TOGGLE_CONTROLS</option>
+                    <option value="zoom">PLG_SIGF_FB_MOBILE_CLICK_CONTENT_OPT_ZOOM</option>
+                </field>
+                <field name="fancybox_mobile_click_slide" type="list" default="toggleControls" label="PLG_SIGF_FB_MOBILE_CLICK_SLIDE" description="PLG_SIGF_FB_MOBILE_CLICK_SLIDE_DESC">
+                    <option value="false">PLG_SIGF_FB_MOBILE_CLICK_SLIDE_OPT_NOTHING</option>
+                    <option value="close">PLG_SIGF_FB_MOBILE_CLICK_SLIDE_OPT_CLOSE</option>
+                    <option value="next">PLG_SIGF_FB_MOBILE_CLICK_SLIDE_OPT_NEXT</option>
+                    <option value="nextOrClose">PLG_SIGF_FB_MOBILE_CLICK_SLIDE_OPT_NEXT_OR_CLOSE</option>
+                    <option value="toggleControls">PLG_SIGF_FB_MOBILE_CLICK_SLIDE_OPT_TOGGLE_CONTROLS</option>
+                    <option value="zoom">PLG_SIGF_FB_MOBILE_CLICK_SLIDE_OPT_ZOOM</option>
+                </field>
+                <field name="fancybox_mobile_dblclick_content" type="list" default="zoom" label="PLG_SIGF_FB_MOBILE_DBLCLICK_CONTENT" description="PLG_SIGF_FB_MOBILE_DBLCLICK_CONTENT_DESC">
+                    <option value="false">PLG_SIGF_FB_MOBILE_DBLCLICK_CONTENT_OPT_NOTHING</option>
+                    <option value="close">PLG_SIGF_FB_MOBILE_DBLCLICK_CONTENT_OPT_CLOSE</option>
+                    <option value="next">PLG_SIGF_FB_MOBILE_DBLCLICK_CONTENT_OPT_NEXT</option>
+                    <option value="nextOrClose">PLG_SIGF_FB_MOBILE_DBLCLICK_CONTENT_OPT_NEXT_OR_CLOSE</option>
+                    <option value="toggleControls">PLG_SIGF_FB_MOBILE_DBLCLICK_CONTENT_OPT_TOGGLE_CONTROLS</option>
+                    <option value="zoom">PLG_SIGF_FB_MOBILE_DBLCLICK_CONTENT_OPT_ZOOM</option>
+                </field>
+                <field name="fancybox_mobile_dblclick_slide" type="list" default="zoom" label="PLG_SIGF_FB_MOBILE_DBLCLICK_SLIDE" description="PLG_SIGF_FB_MOBILE_DBLCLICK_SLIDE_DESC">
+                    <option value="false">PLG_SIGF_FB_MOBILE_DBLCLICK_SLIDE_OPT_NOTHING</option>
+                    <option value="close">PLG_SIGF_FB_MOBILE_DBLCLICK_SLIDE_OPT_CLOSE</option>
+                    <option value="next">PLG_SIGF_FB_MOBILE_DBLCLICK_SLIDE_OPT_NEXT</option>
+                    <option value="nextOrClose">PLG_SIGF_FB_MOBILE_DBLCLICK_SLIDE_OPT_NEXT_OR_CLOSE</option>
+                    <option value="toggleControls">PLG_SIGF_FB_MOBILE_DBLCLICK_SLIDE_OPT_TOGGLE_CONTROLS</option>
+                    <option value="zoom">PLG_SIGF_FB_MOBILE_DBLCLICK_SLIDE_OPT_ZOOM</option>
+                </field>
                 <field type="spacer" name="fancybox_styling_spacer" label="PLG_SIGF_SPACER_FB_STYLING" />
                 <field name="fancybox_base_class" type="text" default="" label="PLG_SIGF_FB_BASE_CLASS" description="PLG_SIGF_FB_BASE_CLASS_DESC" />
                 <field name="fancybox_slide_class" type="text" default="" label="PLG_SIGF_FB_SLIDE_CLASS" description="PLG_SIGF_FB_SLIDE_CLASS_DESC" />

@@ -36,8 +36,8 @@ The plugin is ideal for any type of website: from personal ones (where you'd pos
 - Auto fullscreen mode.
 - Auto slideshow and transition speed.
 - Auto thumbnail grid and behavior settings.
-- Touch settings (enable/disable, momentum, vertical touch)
-- Configuration of click and double click behaviour.
+- Touch settings (enable/disable, momentum, vertical touch).
+- Configuration of click and double click behaviour on mobile/desktop.
 - Styling with CSS classes.
 
 ## Migration

@@ -183,6 +183,11 @@ class plgContentSigf extends JPlugin
         $fancybox_touch = $pluginParams->get('fancybox_touch', 'on');
         $fancybox_touch_vertical = $pluginParams->get('fancybox_touch_vertical', 'on');
         $fancybox_touch_momentum = $pluginParams->get('fancybox_touch_momentum', 'on');
+        $fancybox_mobile_idle_time = $pluginParams->get('fancybox_mobile_idle_time', 'off');
+        $fancybox_mobile_click_content = $pluginParams->get('fancybox_mobile_click_content', 'toggleControls');
+        $fancybox_mobile_click_slide = $pluginParams->get('fancybox_mobile_click_slide', 'toggleControls');
+        $fancybox_mobile_dblclick_content = $pluginParams->get('fancybox_mobile_dblclick_content', 'zoom');
+        $fancybox_mobile_dblclick_slide = $pluginParams->get('fancybox_mobile_dblclick_slide', 'zoom');
         $fancybox_base_class = $pluginParams->get('fancybox_base_class', '');
         $fancybox_slide_class = $pluginParams->get('fancybox_slide_class', '');
         $fancybox_button_arrows = $pluginParams->get('fancybox_button_arrows', 'on');
