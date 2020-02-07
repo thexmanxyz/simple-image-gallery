@@ -157,6 +157,9 @@ class plgContentSigf extends JPlugin
         $cache_expire_time = $pluginParams->get('cache_expire_time', 3600) * 60; // Cache expiration time in minutes
         $fancybox_cdn = $pluginParams->get('fancybox_cdn', 'on');
         $fancybox_version = $pluginParams->get('fancybox_version', '3.5.7');
+        $fancybox_color_mode = $pluginParams->get('fancybox_color_mode', 'black-mode');
+        $fancybox_icon_mode = $pluginParams->get('fancybox_icon_mode', 'default');
+        $fancybox_text_mode = $pluginParams->get('fancybox_text_mode', 'default');
         $fancybox_idle_time = $pluginParams->get('fancybox_idle_time', '3');
         $fancybox_image_protect = $pluginParams->get('fancybox_image_protect', 'off');
         $fancybox_animation_effect = $pluginParams->get('fancybox_animation_effect', 'zoom');
@@ -167,11 +170,13 @@ class plgContentSigf extends JPlugin
         $fancybox_image_target = $pluginParams->get('fancybox_image_target', '_self');
         $fancybox_loop_gallery = $pluginParams->get('fancybox_loop_gallery', 'off');
         $fancybox_keyboard_navigation = $pluginParams->get('fancybox_keyboard_navigation', 'on');
+        $fancybox_mousewheel_navigation = $pluginParams->get('fancybox_mousewheel_navigation', 'on');
         $fancybox_auto_slideshow = $pluginParams->get('fancybox_auto_slideshow', 'off');
         $fancybox_slideshow_speed = $pluginParams->get('fancybox_slideshow_speed', 3000);
         $fancybox_thumbnail_autostart = $pluginParams->get('fancybox_thumbnail_autostart', 'off');
         $fancybox_thumbnail_hide_close = $pluginParams->get('fancybox_thumbnail_hide_close', 'on');
         $fancybox_thumbnail_axis = $pluginParams->get('fancybox_thumbnail_axis', 'y');
+        $fancybox_thumbnail_border = $pluginParams->get('fancybox_thumbnail_border', 'default');
         $fancybox_click_content = $pluginParams->get('fancybox_click_content', 'zoom');
         $fancybox_click_slide = $pluginParams->get('fancybox_click_slide', 'close');
         $fancybox_click_outside = $pluginParams->get('fancybox_click_outside', 'close');
@@ -180,6 +185,7 @@ class plgContentSigf extends JPlugin
         $fancybox_dblclick_outside = $pluginParams->get('fancybox_dblclick_outside', 'false');
         $fancybox_counter = $pluginParams->get('fancybox_counter', 'on');
         $fancybox_auto_fullscreen = $pluginParams->get('fancybox_auto_fullscreen', 'off');
+        $fancybox_gutter = $pluginParams->get('fancybox_gutter', 50);
         $fancybox_touch = $pluginParams->get('fancybox_touch', 'on');
         $fancybox_touch_vertical = $pluginParams->get('fancybox_touch_vertical', 'on');
         $fancybox_touch_momentum = $pluginParams->get('fancybox_touch_momentum', 'on');
@@ -217,6 +223,7 @@ class plgContentSigf extends JPlugin
         $fancybox_download = $pluginParams->get('fancybox_download', JText::_('PLG_SIGF_FB_DOWNLOAD'));
         $fancybox_share = $pluginParams->get('fancybox_share', JText::_('PLG_SIGF_FB_SHARE'));
         $fancybox_zoom = $pluginParams->get('fancybox_zoom', JText::_('PLG_SIGF_FB_ZOOM'));
+        $fancybox_hide_scrollbar = $pluginParams->get('fancybox_hide_scrollbar', 'on');
 
         // Advanced
         $memoryLimit = (int)$pluginParams->get('memoryLimit');

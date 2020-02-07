@@ -51,6 +51,43 @@
                     <option value="on">PLG_SIGF_FB_AUTO_FULLSCREEN_OPT_ON</option>
                     <option value="off">PLG_SIGF_FB_AUTO_FULLSCREEN_OPT_OFF</option>
                 </field>
+                <field name="fancybox_gutter" type="text" hint="50" default="50" label="PLG_SIGF_FB_GUTTER" description="PLG_SIGF_FB_GUTTER_DESC" />
+                <field type="spacer" name="fancybox_appearance" label="PLG_SIGF_SPACER_FB_APPEARANCE" />
+                <field name="fancybox_color_mode" type="list" default="black-mode" label="PLG_SIGF_FB_COLOR_MODE" description="PLG_SIGF_FB_COLOR_MODE">
+                    <option value="black-mode">PLG_SIGF_FB_COLOR_MODE_OPT_BLACK</option>
+                    <option value="white-mode">PLG_SIGF_FB_COLOR_MODE_OPT_WHITE</option>
+                    <option value="gray-mode">PLG_SIGF_FB_COLOR_MODE_OPT_GRAY</option>
+                </field>
+                <field name="fancybox_icon_mode" type="list" default="default" label="PLG_SIGF_FB_ICON_MODE" description="PLG_SIGF_FB_ICON_MODE_DESC">
+                    <option value="default">PLG_SIGF_FB_ICON_MODE_OPT_DEFAULT</option>
+                    <option value="symbol-green">PLG_SIGF_FB_ICON_MODE_OPT_GREEN</option>
+                    <option value="symbol-red">PLG_SIGF_FB_ICON_MODE_OPT_RED</option>
+                    <option value="symbol-blue">PLG_SIGF_FB_ICON_MODE_OPT_BLUE</option>
+                    <option value="symbol-violet">PLG_SIGF_FB_ICON_MODE_OPT_VIOLET</option>
+                    <option value="symbol-orange">PLG_SIGF_FB_ICON_MODE_OPT_ORANGE</option>
+                </field>
+                <field name="fancybox_text_mode" type="list" default="default" label="PLG_SIGF_FB_TEXT_MODE" description="PLG_SIGF_FB_ICON_TEXT_DESC">
+                    <option value="default">PLG_SIGF_FB_TEXT_MODE_OPT_DEFAULT</option>
+                    <option value="text-green">PLG_SIGF_FB_TEXT_MODE_OPT_GREEN</option>
+                    <option value="text-red">PLG_SIGF_FB_TEXT_MODE_OPT_RED</option>
+                    <option value="text-blue">PLG_SIGF_FB_TEXT_MODE_OPT_BLUE</option>
+                    <option value="text-violet">PLG_SIGF_FB_TEXT_MODE_OPT_VIOLET</option>
+                    <option value="text-orange">PLG_SIGF_FB_TEXT_MODE_OPT_ORANGE</option>
+                </field>
+                <field name="fancybox_thumbnail_border" type="list" default="default" label="PLG_SIGF_FB_THUMBNAIL_BORDER" description="PLG_SIGF_FB_THUMBNAIL_BORDER_DESC">
+                    <option value="default">PLG_SIGF_FB_THUMBNAIL_BORDER_OPT_DEFAULT</option>
+                    <option value="border-green">PLG_SIGF_FB_THUMBNAIL_BORDER_OPT_GREEN</option>
+                    <option value="border-red">PLG_SIGF_FB_THUMBNAIL_BORDER_OPT_RED</option>
+                    <option value="border-blue">PLG_SIGF_FB_THUMBNAIL_BORDER_OPT_BLUE</option>
+                    <option value="border-violet">PLG_SIGF_FB_THUMBNAIL_BORDER_OPT_VIOLET</option>
+                    <option value="border-orange">PLG_SIGF_FB_THUMBNAIL_BORDER_OPT_ORANGE</option>
+                    <option value="border-white">PLG_SIGF_FB_THUMBNAIL_BORDER_OPT_WHITE</option>
+                    <option value="border-black">PLG_SIGF_FB_THUMBNAIL_BORDER_OPT_BLACK</option>
+                    <option value="border-gray1">PLG_SIGF_FB_THUMBNAIL_BORDER_OPT_GRAY1</option>
+                    <option value="border-gray2">PLG_SIGF_FB_THUMBNAIL_BORDER_OPT_GRAY2</option>
+                    <option value="border-gray3">PLG_SIGF_FB_THUMBNAIL_BORDER_OPT_GRAY3</option>
+                    <option value="border-gray4">PLG_SIGF_FB_THUMBNAIL_BORDER_OPT_GRAY4</option>
+                </field>
                 <field type="spacer" name="fancybox_navigation" label="PLG_SIGF_SPACER_FB_NAVIGATION" />
                 <field name="fancybox_loop_gallery" type="list" default="off" label="PLG_SIGF_FB_LOOP_GALLERY" description="PLG_SIGF_FB_LOOP_GALLERY_DESC">
                     <option value="on">PLG_SIGF_FB_LOOP_GALLERY_OPT_ON</option>
@@ -59,6 +96,10 @@
                 <field name="fancybox_keyboard_navigation" type="list" default="on" label="PLG_SIGF_FB_KEYBOARD_NAVIGATION" description="PLG_SIGF_FB_KEYBOARD_NAVIGATION_DESC">
                     <option value="on">PLG_SIGF_FB_KEYBOARD_NAVIGATION_OPT_ON</option>
                     <option value="off">PLG_SIGF_FB_KEYBOARD_NAVIGATION_OPT_OFF</option>
+                </field>
+                <field name="fancybox_mousewheel_navigation" type="list" default="on" label="PLG_SIGF_FB_MOUSEWHEEL_NAVIGATION" description="PLG_SIGF_FB_MOUSEWHEEL_NAVIGATION_DESC">
+                    <option value="on">PLG_SIGF_FB_MOUSEWHEEL_NAVIGATION_OPT_ON</option>
+                    <option value="off">PLG_SIGF_FB_MOUSEWHEEL_NAVIGATION_OPT_OFF</option>
                 </field>
                 <field name="fancybox_auto_slideshow" type="list" default="off" label="PLG_SIGF_FB_AUTO_SLIDESHOW" description="PLG_SIGF_FB_AUTO_SLIDESHOW_DESC">
                     <option value="on">PLG_SIGF_FB_AUTO_SLIDESHOW_OPT_ON</option>
@@ -270,6 +311,11 @@
                 <field name="fancybox_image" type="text" default="" hint="PLG_SIGF_FB_IMAGE" label="PLG_SIGF_FB_LANG_IMAGE" description="PLG_SIGF_FB_LANG_IMAGE_DESC" />
                 <field name="fancybox_of" type="text" default="" hint="PLG_SIGF_FB_OF" label="PLG_SIGF_FB_LANG_OF" description="PLG_SIGF_FB_LANG_OF_DESC" />
                 <field name="fancybox_viewing" type="text" default="" hint="PLG_SIGF_YOU_ARE_VIEWING" label="PLG_SIGF_FB_LANG_VIEWING" description="PLG_SIGF_FB_LANG_VIEWING_DESC" />
+                <field type="spacer" name="fancybox_experimental_spacer" label="PLG_SIGF_SPACER_FB_EXPERIMENTAL" />
+                <field name="fancybox_hide_scrollbar" type="list" default="on" label="PLG_SIGF_FB_HIDE_SCROLLBAR" description="PLG_SIGF_FB_HIDE_SCROLLBAR_DESC">
+                    <option value="on">PLG_SIGF_FB_HIDE_SCROLLBAR_OPT_ON</option>
+                    <option value="off">PLG_SIGF_FB_HIDE_SCROLLBAR_OPT_OFF</option>
+                </field>
             </fieldset>
         </fields>
     </config>

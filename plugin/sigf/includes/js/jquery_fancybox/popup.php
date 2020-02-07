@@ -82,6 +82,11 @@ if(!defined('PE_FANCYBOX_LOADED')){
         $keyboardNavi = ' keyboard: false,';
     }
 
+    $mousewheelNavi = '';
+    if($fancybox_mousewheel_navigation == 'off') {
+        $mousewheelNavi = ' wheel: false,';
+    }
+
     $arrowBtns = '';
     if($fancybox_button_arrows == 'off') {
         $arrowBtns = ' arrows: false,';
@@ -126,10 +131,31 @@ if(!defined('PE_FANCYBOX_LOADED')){
         $imageTransitionDuration = ' transitionDuration: ' . $fancybox_transition_duration . ',';
     }
 
-    $baseClasses = '';
-    if($fancybox_base_class != '') {
-        $baseClasses = ' baseClass: \'' . $fancybox_base_class . '\',';
+    $baseClasses = $fancybox_base_class;
+    if($baseClasses != ''){
+        $baseClasses .= ' ';
     }
+    $baseClasses .= $fancybox_color_mode;
+    if($fancybox_icon_mode != 'default') {
+        if($baseClasses != ''){
+            $baseClasses .= ' ';
+        }
+        $baseClasses .= $fancybox_icon_mode;
+    }
+    if($fancybox_text_mode != 'default') {
+        if($baseClasses != ''){
+            $baseClasses .= ' ';
+        }
+        $baseClasses .= $fancybox_text_mode;
+    }
+    if($fancybox_thumbnail_border != 'default') {
+        if($baseClasses != ''){
+            $baseClasses .= ' ';
+        }
+        $baseClasses .= $fancybox_thumbnail_border;
+    }
+    $baseClasses = ' baseClass: \'' . $baseClasses . '\',';
+
 
     $slideClasses = '';
     if($fancybox_slide_class != '') {
@@ -139,6 +165,11 @@ if(!defined('PE_FANCYBOX_LOADED')){
     $autoFullscreen = '';
     if($fancybox_auto_fullscreen == 'on') {
         $autoFullscreen = ' fullScreen: { autoStart: true },';
+    }
+    
+    $slideGutter = '';
+    if($fancybox_gutter != 50) {
+        $slideGutter = ' gutter: ' . $fancybox_gutter . ',';
     }
 
     $touchMobile = '';
@@ -298,12 +329,18 @@ if(!defined('PE_FANCYBOX_LOADED')){
         }
         $mobile = ' mobile: {' . $mobile . '},';
     }
+    
+    $hideScrollbar = '';
+    if($fancybox_hide_scrollbar != 'on') {
+        $hideScrollbar = ' hideScrollbar: false,';
+    }
 
-    $fancyBoxConfig = $loopGallery . $keyboardNavi . $arrowBtns . $infoBar . $idleTime . 
+    $fancyBoxConfig = $loopGallery . $keyboardNavi . $mousewheelNavi . $arrowBtns . $infoBar . $idleTime . 
                         $imageProtect . $imageAnimation . $imageAnimationDuration . $imageTransition . 
                         $imageTransitionDuration . $baseClasses . $slideClasses . $autoFullscreen .
-                        $touchMobile . $slideShow . $thumbnails . $clickContent . $clickSlide .
-                        $clickOutside . $dblClickContent . $dblClickSlide . $dblClickOutside . $mobile;
+                        $slideGutter . $touchMobile . $slideShow . $thumbnails . $clickContent . $clickSlide .
+                        $clickOutside . $dblClickContent . $dblClickSlide . $dblClickOutside . $mobile .
+						$hideScrollbar;
 
     $buttonLabeling = '';
     $buttonLabeling = "$.fancybox.defaults.i18n." . $langTag . " = {

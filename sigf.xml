@@ -55,6 +55,43 @@
             <option value="on">PLG_SIGF_FB_AUTO_FULLSCREEN_OPT_ON</option>
             <option value="off">PLG_SIGF_FB_AUTO_FULLSCREEN_OPT_OFF</option>
         </param>
+        <param name="fancybox_gutter" type="text" default="50" label="PLG_SIGF_FB_GUTTER" description="PLG_SIGF_FB_GUTTER_DESC" />
+        <param type="spacer" default="PLG_SIGF_SPACER_FB_APPEARANCE" />
+        <param name="fancybox_color_mode" type="list" default="black-mode" label="PLG_SIGF_FB_COLOR_MODE" description="PLG_SIGF_FB_COLOR_MODE_DESC">
+            <option value="black-mode">PLG_SIGF_FB_COLOR_MODE_OPT_BLACK</option>
+            <option value="white-mode">PLG_SIGF_FB_COLOR_MODE_OPT_WHITE</option>
+            <option value="gray-mode">PLG_SIGF_FB_COLOR_MODE_OPT_GRAY</option>
+        </param>
+        <param name="fancybox_icon_mode" type="list" default="default" label="PLG_SIGF_FB_ICON_MODE" description="PLG_SIGF_FB_ICON_MODE_DESC">
+            <option value="default">PLG_SIGF_FB_ICON_MODE_OPT_DEFAULT</option>
+            <option value="symbol-green">PLG_SIGF_FB_ICON_MODE_OPT_GREEN</option>
+            <option value="symbol-red">PLG_SIGF_FB_ICON_MODE_OPT_RED</option>
+            <option value="symbol-blue">PLG_SIGF_FB_ICON_MODE_OPT_BLUE</option>
+            <option value="symbol-violet">PLG_SIGF_FB_ICON_MODE_OPT_VIOLET</option>
+            <option value="symbol-orange">PLG_SIGF_FB_ICON_MODE_OPT_ORANGE</option>
+        </param>
+        <param name="fancybox_text_mode" type="list" default="default" label="PLG_SIGF_FB_TEXT_MODE" description="PLG_SIGF_FB_ICON_TEXT_DESC">
+            <option value="default">PLG_SIGF_FB_TEXT_MODE_OPT_DEFAULT</option>
+            <option value="text-green">PLG_SIGF_FB_TEXT_MODE_OPT_GREEN</option>
+            <option value="text-red">PLG_SIGF_FB_TEXT_MODE_OPT_RED</option>
+            <option value="text-blue">PLG_SIGF_FB_TEXT_MODE_OPT_BLUE</option>
+            <option value="text-violet">PLG_SIGF_FB_TEXT_MODE_OPT_VIOLET</option>
+            <option value="text-orange">PLG_SIGF_FB_TEXT_MODE_OPT_ORANGE</option>
+        </param>
+        <param name="fancybox_thumbnail_border" type="list" default="default" label="PLG_SIGF_FB_THUMBNAIL_BORDER" description="PLG_SIGF_FB_THUMBNAIL_BORDER_DESC">
+            <option value="default">PLG_SIGF_FB_THUMBNAIL_BORDER_OPT_DEFAULT</option>
+            <option value="border-green">PLG_SIGF_FB_THUMBNAIL_BORDER_OPT_GREEN</option>
+            <option value="border-red">PLG_SIGF_FB_THUMBNAIL_BORDER_OPT_RED</option>
+            <option value="border-blue">PLG_SIGF_FB_THUMBNAIL_BORDER_OPT_BLUE</option>
+            <option value="border-violet">PLG_SIGF_FB_THUMBNAIL_BORDER_OPT_VIOLET</option>
+            <option value="border-orange">PLG_SIGF_FB_THUMBNAIL_BORDER_OPT_ORANGE</option>
+            <option value="border-white">PLG_SIGF_FB_THUMBNAIL_BORDER_OPT_WHITE</option>
+            <option value="border-black">PLG_SIGF_FB_THUMBNAIL_BORDER_OPT_BLACK</option>
+            <option value="border-gray1">PLG_SIGF_FB_THUMBNAIL_BORDER_OPT_GRAY1</option>
+            <option value="border-gray2">PLG_SIGF_FB_THUMBNAIL_BORDER_OPT_GRAY2</option>
+            <option value="border-gray3">PLG_SIGF_FB_THUMBNAIL_BORDER_OPT_GRAY3</option>
+            <option value="border-gray4">PLG_SIGF_FB_THUMBNAIL_BORDER_OPT_GRAY4</option>
+        </param>
         <param type="spacer" default="PLG_SIGF_SPACER_FB_NAVIGATION" />
         <param name="fancybox_loop_gallery" type="list" default="off" label="PLG_SIGF_FB_LOOP_GALLERY" description="PLG_SIGF_FB_LOOP_GALLERY_DESC">
             <option value="on">PLG_SIGF_FB_LOOP_GALLERY_OPT_ON</option>
@@ -63,6 +100,10 @@
         <param name="fancybox_keyboard_navigation" type="list" default="on" label="PLG_SIGF_FB_KEYBOARD_NAVIGATION" description="PLG_SIGF_FB_KEYBOARD_NAVIGATION_DESC">
             <option value="on">PLG_SIGF_FB_KEYBOARD_NAVIGATION_OPT_ON</option>
             <option value="off">PLG_SIGF_FB_KEYBOARD_NAVIGATION_OPT_OFF</option>
+        </param>
+        <param name="fancybox_mousewheel_navigation" type="list" default="on" label="PLG_SIGF_FB_MOUSEWHEEL_NAVIGATION" description="PLG_SIGF_FB_MOUSEWHEEL_NAVIGATION_DESC">
+            <option value="on">PLG_SIGF_FB_MOUSEWHEEL_NAVIGATION_OPT_ON</option>
+            <option value="off">PLG_SIGF_FB_MOUSEWHEEL_NAVIGATION_OPT_OFF</option>
         </param>
         <param name="fancybox_auto_slideshow" type="list" default="off" label="PLG_SIGF_FB_AUTO_SLIDESHOW" description="PLG_SIGF_FB_AUTO_SLIDESHOW_DESC">
             <option value="on">PLG_SIGF_FB_AUTO_SLIDESHOW_OPT_ON</option>
@@ -88,18 +129,18 @@
         </param>
         <param name="fancybox_transition_duration" type="text" default="366" label="PLG_SIGF_FB_TRANSITION_DURATION" description="PLG_SIGF_FB_TRANSITION_DURATION_DESC" />
         <param type="spacer" default="PLG_SIGF_SPACER_FB_THUMBNAILS" />
-        <field name="fancybox_thumbnail_autostart" type="list" default="off" label="PLG_SIGF_FB_THUMBNAIL_AUTO" description="PLG_SIGF_FB_THUMBNAIL_AUTO_DESC">
+        <param name="fancybox_thumbnail_autostart" type="list" default="off" label="PLG_SIGF_FB_THUMBNAIL_AUTO" description="PLG_SIGF_FB_THUMBNAIL_AUTO_DESC">
             <option value="on">PLG_SIGF_FB_THUMBNAIL_AUTO_OPT_ON</option>
             <option value="off">PLG_SIGF_FB_THUMBNAIL_AUTO_OPT_OFF</option>
-        </field>
-        <field name="fancybox_thumbnail_hide_close" type="list" default="on" label="PLG_SIGF_FB_THUMBNAIL_HIDE_CLOSE" description="PLG_SIGF_FB_THUMBNAIL_HIDE_CLOSE_DESC">
+        </param>
+        <param name="fancybox_thumbnail_hide_close" type="list" default="on" label="PLG_SIGF_FB_THUMBNAIL_HIDE_CLOSE" description="PLG_SIGF_FB_THUMBNAIL_HIDE_CLOSE_DESC">
             <option value="on">PLG_SIGF_FB_THUMBNAIL_HIDE_CLOSE_OPT_ON</option>
             <option value="off">PLG_SIGF_FB_THUMBNAIL_HIDE_CLOSE_OPT_OFF</option>
-        </field>
-        <field name="fancybox_thumbnail_axis" type="list" default="y" label="PLG_SIGF_FB_THUMBNAIL_AXIS" description="PLG_SIGF_FB_THUMBNAIL_AXIS_DESC">
+        </param>
+        <param name="fancybox_thumbnail_axis" type="list" default="y" label="PLG_SIGF_FB_THUMBNAIL_AXIS" description="PLG_SIGF_FB_THUMBNAIL_AXIS_DESC">
             <option value="x">PLG_SIGF_FB_THUMBNAIL_AXIS_OPT_X</option>
             <option value="y">PLG_SIGF_FB_THUMBNAIL_AXIS_OPT_Y</option>
-        </field>
+        </param>
         <param type="spacer" default="PLG_SIGF_SPACER_FB_BEHAVIOR" />
         <param name="fancybox_click_content" type="list" default="zoom" label="PLG_SIGF_FB_CLICK_CONTENT" description="PLG_SIGF_FB_CLICK_CONTENT_DESC">
             <option value="false">PLG_SIGF_FB_CLICK_CONTENT_OPT_NOTHING</option>
@@ -274,6 +315,11 @@
         <param name="fancybox_image" type="text" default="" label="PLG_SIGF_FB_LANG_IMAGE" description="PLG_SIGF_FB_LANG_IMAGE_DESC" />
         <param name="fancybox_of" type="text" default="" label="PLG_SIGF_FB_LANG_OF" description="PLG_SIGF_FB_LANG_OF_DESC" />
         <param name="fancybox_viewing" type="text" default="" label="PLG_SIGF_FB_LANG_VIEWING" description="PLG_SIGF_FB_LANG_VIEWING_DESC" />
+        <param type="spacer" default="PLG_SIGF_SPACER_FB_EXPERIMENTAL" />
+        <param name="fancybox_hide_scrollbar" type="list" default="on" label="PLG_SIGF_FB_HIDE_SCROLLBAR" description="PLG_SIGF_FB_HIDE_SCROLLBAR_DESC">
+            <option value="on">PLG_SIGF_FB_HIDE_SCROLLBAR_OPT_ON</option>
+            <option value="off">PLG_SIGF_FB_HIDE_SCROLLBAR_OPT_OFF</option>
+        </param>
     </params>
     <!-- Files -->
     <files folder="plugin" destination="sigf">

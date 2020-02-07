@@ -105,9 +105,9 @@ class SimpleImageGalleryForkHelper
             $original = $sitePath.$srcimgfolder.'/'.$filename;
 
             // Check if thumb image exists already
-            $thumbimage = $cacheFolderPath.'/'.$prefix.$gal_id.'_'.strtolower($this->cleanThumbName($thumbfilename));
+            $thumbimage = $cacheFolderPath.'/'.$prefix.$gal_id.'_'.mb_strtolower($this->cleanThumbName($thumbfilename));
 
-            if (file_exists($thumbimage) && is_readable($thumbimage) && (filemtime($thumbimage) + $cache_expire_time) > time()) {
+            if (file_exists($thumbimage) && is_readable($thumbimage) && ($cache_expire_time == -1 || (filemtime($thumbimage) + $cache_expire_time) > time())) {
                 // Do nothing
             } else {
                 // Otherwise create the thumb image
@@ -175,7 +175,7 @@ class SimpleImageGalleryForkHelper
             // Assemble the image elements
             $gallery[$key]->filename = $filename;
             $gallery[$key]->sourceImageFilePath = $siteUrl.$srcimgfolder.'/'.$this->replaceWhiteSpace($filename);
-            $gallery[$key]->thumbImageFilePath = $siteUrl.'cache/sigf/'.$prefix.$gal_id.'_'.strtolower($this->cleanThumbName($thumbfilename));
+            $gallery[$key]->thumbImageFilePath = $siteUrl.'cache/sigf/'.$prefix.$gal_id.'_'.mb_strtolower($this->cleanThumbName($thumbfilename));
             $gallery[$key]->width = $thb_width;
             $gallery[$key]->height = $thb_height;
         }
