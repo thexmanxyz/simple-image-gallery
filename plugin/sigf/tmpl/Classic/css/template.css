@@ -73,6 +73,18 @@ ul.sigfClassic li.sigfThumb a.sigfLink:hover:after {position:absolute;top:50%;le
 .text-violet .fancybox-caption, .text-violet .fancybox-infobar { color: #9932be; }
 .text-orange .fancybox-caption, .text-orange .fancybox-infobar { color: #fd931d; }
 
+.sidebar-green .fancybox-thumbs { background: #32be8a; }
+.sidebar-red .fancybox-thumbs { background: #be3232; }
+.sidebar-blue .fancybox-thumbs { background: #326abe; }
+.sidebar-violet .fancybox-thumbs { background: #9932be; }
+.sidebar-orange .fancybox-thumbs { background: #fd931d; }
+.sidebar-white .fancybox-thumbs { background: #fff; }
+.sidebar-black .fancybox-thumbs { background: #000; }
+.sidebar-gray1 .fancybox-thumbs { background: #333; }
+.sidebar-gray2 .fancybox-thumbs { background: #666; }
+.sidebar-gray3 .fancybox-thumbs { background: #999; }
+.sidebar-gray4 .fancybox-thumbs { background: #CCC; }
+
 .border-green .fancybox-thumbs__list a::before { border: 6px solid #32be8a; }
 .border-red .fancybox-thumbs__list a::before { border: 6px solid #be3232; }
 .border-blue .fancybox-thumbs__list a::before { border: 6px solid #326abe; }

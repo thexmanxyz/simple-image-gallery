@@ -179,6 +179,7 @@ class plgContentSigf extends JPlugin
         $fancybox_thumbnail_hide_close = $pluginParams->get('fancybox_thumbnail_hide_close', 'on');
         $fancybox_thumbnail_axis = $pluginParams->get('fancybox_thumbnail_axis', 'y');
         $fancybox_thumbnail_border = $pluginParams->get('fancybox_thumbnail_border', 'default');
+        $fancybox_thumbnail_sidebar = $pluginParams->get('fancybox_thumbnail_sidebar', 'default');
         $fancybox_click_content = $pluginParams->get('fancybox_click_content', 'zoom');
         $fancybox_click_slide = $pluginParams->get('fancybox_click_slide', 'close');
         $fancybox_click_outside = $pluginParams->get('fancybox_click_outside', 'close');

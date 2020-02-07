@@ -79,6 +79,20 @@
             <option value="text-violet">PLG_SIGF_FB_TEXT_MODE_OPT_VIOLET</option>
             <option value="text-orange">PLG_SIGF_FB_TEXT_MODE_OPT_ORANGE</option>
         </param>
+        <param name="fancybox_thumbnail_sidebar" type="list" default="default" label="PLG_SIGF_FB_THUMBNAIL_SIDEBAR" description="PLG_SIGF_FB_THUMBNAIL_SIDEBAR_DESC">
+            <option value="default">PLG_SIGF_FB_THUMBNAIL_SIDEBAR_OPT_DEFAULT</option>
+            <option value="sidebar-green">PLG_SIGF_FB_THUMBNAIL_SIDEBAR_OPT_GREEN</option>
+            <option value="sidebar-red">PLG_SIGF_FB_THUMBNAIL_SIDEBAR_OPT_RED</option>
+            <option value="sidebar-blue">PLG_SIGF_FB_THUMBNAIL_SIDEBAR_OPT_BLUE</option>
+            <option value="sidebar-violet">PLG_SIGF_FB_THUMBNAIL_SIDEBAR_OPT_VIOLET</option>
+            <option value="sidebar-orange">PLG_SIGF_FB_THUMBNAIL_SIDEBAR_OPT_ORANGE</option>
+            <option value="sidebar-white">PLG_SIGF_FB_THUMBNAIL_SIDEBAR_OPT_WHITE</option>
+            <option value="sidebar-black">PLG_SIGF_FB_THUMBNAIL_SIDEBAR_OPT_BLACK</option>
+            <option value="sidebar-gray1">PLG_SIGF_FB_THUMBNAIL_SIDEBAR_OPT_GRAY1</option>
+            <option value="sidebar-gray2">PLG_SIGF_FB_THUMBNAIL_SIDEBAR_OPT_GRAY2</option>
+            <option value="sidebar-gray3">PLG_SIGF_FB_THUMBNAIL_SIDEBAR_OPT_GRAY3</option>
+            <option value="sidebar-gray4">PLG_SIGF_FB_THUMBNAIL_SIDEBAR_OPT_GRAY4</option>
+        </param>
         <param name="fancybox_thumbnail_border" type="list" default="default" label="PLG_SIGF_FB_THUMBNAIL_BORDER" description="PLG_SIGF_FB_THUMBNAIL_BORDER_DESC">
             <option value="default">PLG_SIGF_FB_THUMBNAIL_BORDER_OPT_DEFAULT</option>
             <option value="border-green">PLG_SIGF_FB_THUMBNAIL_BORDER_OPT_GREEN</option>

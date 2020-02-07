@@ -154,6 +154,12 @@ if(!defined('PE_FANCYBOX_LOADED')){
         }
         $baseClasses .= $fancybox_text_mode;
     }
+    if($fancybox_thumbnail_sidebar != 'default') {
+        if($baseClasses != ''){
+            $baseClasses .= ' ';
+        }
+        $baseClasses .= $fancybox_thumbnail_sidebar;
+    }
     if($fancybox_thumbnail_border != 'default') {
         if($baseClasses != ''){
             $baseClasses .= ' ';
@@ -301,7 +307,7 @@ if(!defined('PE_FANCYBOX_LOADED')){
         $fancybox_mobile_click_slide != 'toggleControls' || 
         $fancybox_mobile_dblclick_content != 'zoom' || 
         $fancybox_mobile_dblclick_slide != 'zoom') {
-  
+
         if($fancybox_mobile_idle_time == 'on') {
             $mobile .= 'idleTime: true';
         }
