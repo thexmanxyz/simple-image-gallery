@@ -22,9 +22,13 @@ $thumbStyle = '';
 if($thb_style != 'default') {
     $thumbStyle = ' ' . $thb_style;
 }
+$thumbAlign = '';
+if($thb_align != 'default') {
+    $thumbAlign = ' ' . $thb_align;
+}
 ?>
 
-<ul id="sigfId<?php echo $gal_id; ?>" class="sigfContainer sigfClassic<?php echo $extraWrapperClass; ?>">
+<ul id="sigfId<?php echo $gal_id; ?>" class="sigfContainer sigfClassic<?php echo $thumbAlign; echo $extraWrapperClass; ?>">
     <?php foreach($gallery as $count=>$photo):
     $captionHelp = $captionText;
     if($fancybox_caption_image_name == 'on') {

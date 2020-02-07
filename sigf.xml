@@ -29,12 +29,23 @@
             <option value="1.12.4">PLG_SIGF_LOAD_V1_12_X_LATEST_COPY</option>
         </param>
         <param type="spacer" default="PLG_SIGF_SPACER_THUMBNAILS" />
-        <param name="thb_style" type="list" default="default" label="PLG_SIGF_THUMBNAILS_STYLE" description="PLG_SIGF_THUMBNAILS_STYLE_DESC">
+        <param name="thb_align" type="list" default="default" label="PLG_SIGF_THUMBNAILS_ALIGN" description="PLG_SIGF_THUMBNAILS_ALIGN_DESC">
+            <option value="default">PLG_SIGF_THUMBNAILS_ALIGN_OPT_DEFAULT</option>
+            <option value="al-center">PLG_SIGF_THUMBNAILS_ALIGN_OPT_CENTER</option>
+            <option value="al-right">PLG_SIGF_THUMBNAILS_ALIGN_OPT_RIGHT</option>
+        </param>
+		<param name="thb_style" type="list" default="default" label="PLG_SIGF_THUMBNAILS_STYLE" description="PLG_SIGF_THUMBNAILS_STYLE_DESC">
             <option value="default">PLG_SIGF_THUMBNAILS_STYLE_OPT_DEFAULT</option>
             <option value="pr-1">PLG_SIGF_THUMBNAILS_STYLE_OPT_POLAROID1</option>
             <option value="pr-2">PLG_SIGF_THUMBNAILS_STYLE_OPT_POLAROID2</option>
             <option value="pr-3">PLG_SIGF_THUMBNAILS_STYLE_OPT_POLAROID3</option>
             <option value="pr-4">PLG_SIGF_THUMBNAILS_STYLE_OPT_POLAROID4</option>
+        </param>
+        <param name="thb_target" type="list" default="_blank" label="PLG_SIGF_FB_IMAGE_TARGET" description="PLG_SIGF_FB_IMAGE_TARGET_DESC">
+            <option value="_self">PLG_SIGF_FB_IMAGE_TARGET_OPT_SELF</option>
+            <option value="_blank">PLG_SIGF_FB_IMAGE_TARGET_OPT_BLANK</option>
+            <option value="_parent">PLG_SIGF_FB_IMAGE_TARGET_OPT_PARENT</option>
+            <option value="_top">PLG_SIGF_FB_IMAGE_TARGET_OPT_TOP</option>
         </param>
         <param name="thb_width" type="text" default="360" size="6" label="PLG_SIGF_TW" description="PLG_SIGF_TW_DESC" />
         <param name="thb_height" type="text" default="240" size="6" label="PLG_SIGF_TH" description="PLG_SIGF_TH_DESC" />
@@ -47,12 +58,6 @@
             <option value="off">PLG_SIGF_FB_CDN_OPT_OFF</option>
         </param>
         <param name="fancybox_version" type="text" default="3.5.7" label="PLG_SIGF_FB_VERSION" description="PLG_SIGF_FB_VERSION_DESC" />
-        <param name="fancybox_image_target" type="list" default="_blank" label="PLG_SIGF_FB_IMAGE_TARGET" description="PLG_SIGF_FB_IMAGE_TARGET_DESC">
-            <option value="_self">PLG_SIGF_FB_IMAGE_TARGET_OPT_SELF</option>
-            <option value="_blank">PLG_SIGF_FB_IMAGE_TARGET_OPT_BLANK</option>
-            <option value="_parent">PLG_SIGF_FB_IMAGE_TARGET_OPT_PARENT</option>
-            <option value="_top">PLG_SIGF_FB_IMAGE_TARGET_OPT_TOP</option>
-        </param>
         <param type="spacer" default="PLG_SIGF_SPACER_FB_APPEARANCE" />
         <param name="fancybox_color_mode" type="list" default="black-mode" label="PLG_SIGF_FB_COLOR_MODE" description="PLG_SIGF_FB_COLOR_MODE_DESC">
             <option value="black-mode">PLG_SIGF_FB_COLOR_MODE_OPT_BLACK</option>
@@ -71,7 +76,7 @@
             <option value="default">PLG_SIGF_FB_IMAGE_MODE_OPT_DEFAULT</option>
             <option value="polaroid-img">PLG_SIGF_FB_IMAGE_MODE_OPT_POLAROID</option>
         </param>
-        <param name="fancybox_text_mode" type="list" default="default" label="PLG_SIGF_FB_TEXT_MODE" description="PLG_SIGF_FB_ICON_TEXT_DESC">
+        <param name="fancybox_text_mode" type="list" default="default" label="PLG_SIGF_FB_TEXT_MODE" description="PLG_SIGF_FB_TEXT_MODE_DESC">
             <option value="default">PLG_SIGF_FB_TEXT_MODE_OPT_DEFAULT</option>
             <option value="text-green">PLG_SIGF_FB_TEXT_MODE_OPT_GREEN</option>
             <option value="text-red">PLG_SIGF_FB_TEXT_MODE_OPT_RED</option>

@@ -152,6 +152,7 @@ class plgContentSigf extends JPlugin
         $thb_width = (!is_null($params->get('thb_width', null))) ? $params->get('thb_width') : $pluginParams->get('thb_width', 200);
         $thb_height = (!is_null($params->get('thb_height', null))) ? $params->get('thb_height') : $pluginParams->get('thb_height', 160);
         $thb_style = $pluginParams->get('thb_style', 'default');
+        $thb_align = $pluginParams->get('thb_align', 'default');
         $smartResize = 1;
         $jpg_quality = $pluginParams->get('jpg_quality', 80);
         $showcaptions = 0;
@@ -169,7 +170,7 @@ class plgContentSigf extends JPlugin
         $fancybox_transition_effect = $pluginParams->get('fancybox_transition_effect', 'fade');
         $fancybox_transition_duration = $pluginParams->get('fancybox_transition_duration', 366);
         $fancybox_language = $pluginParams->get('fancybox_language', 'default');
-        $fancybox_image_target = $pluginParams->get('fancybox_image_target', '_self');
+        $thb_target = $pluginParams->get('thb_target', '_self');
         $fancybox_loop_gallery = $pluginParams->get('fancybox_loop_gallery', 'off');
         $fancybox_keyboard_navigation = $pluginParams->get('fancybox_keyboard_navigation', 'on');
         $fancybox_mousewheel_navigation = $pluginParams->get('fancybox_mousewheel_navigation', 'on');

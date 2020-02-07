@@ -40,6 +40,7 @@ The plugin is ideal for any type of website: from personal ones (where you'd pos
 - Configuration of click and double click behaviour on mobile/desktop.
 - Customizing of fancyBox appearance with many predefined color styles.
 - Polaroid mode for fancyBox as well as image grid.
+- Alignment of image grid.
 - Styling with CSS classes.
 
 ## Migration
