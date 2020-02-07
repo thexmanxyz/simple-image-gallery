@@ -142,6 +142,12 @@ if(!defined('PE_FANCYBOX_LOADED')){
         }
         $baseClasses .= $fancybox_icon_mode;
     }
+    if($fancybox_image_mode != 'default') {
+        if($baseClasses != ''){
+            $baseClasses .= ' ';
+        }
+        $baseClasses .= $fancybox_image_mode;
+    }
     if($fancybox_text_mode != 'default') {
         if($baseClasses != ''){
             $baseClasses .= ' ';
@@ -340,7 +346,7 @@ if(!defined('PE_FANCYBOX_LOADED')){
                         $imageTransitionDuration . $baseClasses . $slideClasses . $autoFullscreen .
                         $slideGutter . $touchMobile . $slideShow . $thumbnails . $clickContent . $clickSlide .
                         $clickOutside . $dblClickContent . $dblClickSlide . $dblClickOutside . $mobile .
-						$hideScrollbar;
+                        $hideScrollbar;
 
     $buttonLabeling = '';
     $buttonLabeling = "$.fancybox.defaults.i18n." . $langTag . " = {

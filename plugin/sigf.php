@@ -151,6 +151,7 @@ class plgContentSigf extends JPlugin
         $thb_template = 'Classic';
         $thb_width = (!is_null($params->get('thb_width', null))) ? $params->get('thb_width') : $pluginParams->get('thb_width', 200);
         $thb_height = (!is_null($params->get('thb_height', null))) ? $params->get('thb_height') : $pluginParams->get('thb_height', 160);
+        $thb_style = $pluginParams->get('thb_style', 'default');
         $smartResize = 1;
         $jpg_quality = $pluginParams->get('jpg_quality', 80);
         $showcaptions = 0;
@@ -159,6 +160,7 @@ class plgContentSigf extends JPlugin
         $fancybox_version = $pluginParams->get('fancybox_version', '3.5.7');
         $fancybox_color_mode = $pluginParams->get('fancybox_color_mode', 'black-mode');
         $fancybox_icon_mode = $pluginParams->get('fancybox_icon_mode', 'default');
+        $fancybox_image_mode = $pluginParams->get('fancybox_image_mode', 'default');
         $fancybox_text_mode = $pluginParams->get('fancybox_text_mode', 'default');
         $fancybox_idle_time = $pluginParams->get('fancybox_idle_time', '3');
         $fancybox_image_protect = $pluginParams->get('fancybox_image_protect', 'off');

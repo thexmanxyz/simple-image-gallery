@@ -39,6 +39,7 @@ The plugin is ideal for any type of website: from personal ones (where you'd pos
 - Touch settings (enable/disable, momentum, vertical touch).
 - Configuration of click and double click behaviour on mobile/desktop.
 - Customizing of fancyBox appearance with many predefined color styles.
+- Polaroid mode for fancyBox as well as image grid.
 - Styling with CSS classes.
 
 ## Migration
