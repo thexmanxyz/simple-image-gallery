@@ -11,8 +11,8 @@
 defined('_JEXEC') or die('Restricted access');
 
 $targetAttr = '';
-if($fancybox_image_target != '_self') {
-    $targetAttr = ' target="' . $fancybox_image_target . '"';
+if($thb_target != '_self') {
+    $targetAttr = ' target="' . $thb_target . '"';
 }
 $captionText = '';
 if($fancybox_caption_text == 'on') {
